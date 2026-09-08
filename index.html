@@ -862,6 +862,153 @@
 
 
         /* =====================================================
+           REDES SOCIALES
+        ===================================================== */
+
+        .social-section {
+
+            background:
+                rgba(5,7,8,0.88);
+        }
+
+
+        .social-grid {
+
+            max-width: 1150px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .social-card {
+
+            min-height: 210px;
+
+            padding: 28px 24px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.10);
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(19,22,25,0.92),
+                    rgba(9,11,13,0.92)
+                );
+
+            backdrop-filter:
+                blur(10px);
+
+            transition:
+                transform 0.25s,
+                border-color 0.25s,
+                box-shadow 0.25s;
+        }
+
+
+        .social-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                rgba(169,130,255,0.65);
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,0.35);
+        }
+
+
+        .social-name {
+
+            font-size: 21px;
+
+            font-weight: 950;
+
+            margin-bottom: 8px;
+        }
+
+
+        .social-username {
+
+            color: #8b8d94;
+
+            font-size: 13px;
+
+            word-break: break-word;
+        }
+
+
+        .social-description {
+
+            color: #6f7178;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            margin-top: 14px;
+        }
+
+
+        .social-button {
+
+            display: block;
+
+            width: 100%;
+
+            padding: 10px;
+
+            text-align: center;
+
+            border:
+                1px solid
+                rgba(169,130,255,0.55);
+
+            border-radius: 7px;
+
+            color: #b49cff;
+
+            text-decoration: none;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            transition: 0.2s;
+        }
+
+
+        .social-button:hover {
+
+            background:
+                #a982ff;
+
+            color: #08090a;
+
+            border-color:
+                #a982ff;
+        }
+
+
+        /* =====================================================
            COMUNIDAD
         ===================================================== */
 
@@ -962,7 +1109,8 @@
                 display: none;
             }
 
-            .ranks {
+            .ranks,
+            .social-grid {
 
                 grid-template-columns:
                     repeat(2, 1fr);
@@ -1001,7 +1149,8 @@
                 flex-wrap: wrap;
             }
 
-            .ranks {
+            .ranks,
+            .social-grid {
 
                 grid-template-columns:
                     1fr;
@@ -1074,15 +1223,20 @@
                 </a>
             </li>
 
+            <li>
+                <a href="#redes">
+                    Redes
+                </a>
+            </li>
+
         </ul>
 
 
         <a
-            href="https://discord.gg/DkZKK2kXU"
-            target="_blank"
+            href="#redes"
             class="discord-button"
         >
-            DISCORD
+            REDES
         </a>
 
     </nav>
@@ -1302,8 +1456,6 @@
         <div class="ranks">
 
 
-            <!-- ORIGIN -->
-
             <div class="rank origin">
 
                 <div>
@@ -1326,10 +1478,7 @@
                         $2.99
                     </div>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
+                    <a href="#" class="rank-buy">
                         Comprar
                     </a>
 
@@ -1337,8 +1486,6 @@
 
             </div>
 
-
-            <!-- ELITE -->
 
             <div class="rank elite">
 
@@ -1362,10 +1509,7 @@
                         $4.99
                     </div>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
+                    <a href="#" class="rank-buy">
                         Comprar
                     </a>
 
@@ -1373,8 +1517,6 @@
 
             </div>
 
-
-            <!-- CELESTIAL -->
 
             <div class="rank celestial">
 
@@ -1397,10 +1539,7 @@
                         $7.99
                     </div>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
+                    <a href="#" class="rank-buy">
                         Comprar
                     </a>
 
@@ -1408,8 +1547,6 @@
 
             </div>
 
-
-            <!-- MAJESTAD -->
 
             <div class="rank majestad">
 
@@ -1432,10 +1569,7 @@
                         $11.99
                     </div>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
+                    <a href="#" class="rank-buy">
                         Comprar
                     </a>
 
@@ -1443,8 +1577,6 @@
 
             </div>
 
-
-            <!-- GUARDIAN -->
 
             <div class="rank guardian">
 
@@ -1468,10 +1600,7 @@
                         $15.99
                     </div>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
+                    <a href="#" class="rank-buy">
                         Comprar
                     </a>
 
@@ -1479,8 +1608,6 @@
 
             </div>
 
-
-            <!-- SEMIDIOS -->
 
             <div class="rank semidios">
 
@@ -1503,10 +1630,7 @@
                         $24.99
                     </div>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
+                    <a href="#" class="rank-buy">
                         Comprar
                     </a>
 
@@ -1514,8 +1638,6 @@
 
             </div>
 
-
-            <!-- DIOS -->
 
             <div class="rank dios">
 
@@ -1538,10 +1660,7 @@
                         $34.99
                     </div>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
+                    <a href="#" class="rank-buy">
                         Comprar
                     </a>
 
@@ -1549,8 +1668,6 @@
 
             </div>
 
-
-            <!-- PRÓXIMAMENTE -->
 
             <div class="rank soon">
 
@@ -1578,6 +1695,173 @@
                     </span>
 
                 </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         REDES SOCIALES
+    ===================================================== -->
+
+    <section
+        class="social-section"
+        id="redes"
+    >
+
+        <div class="section-title">
+
+            <small>
+                MIS REDES
+            </small>
+
+            <h2>
+                Sígueme en redes.
+            </h2>
+
+            <p>
+                Contenido, directos, novedades y todo lo relacionado
+                con Kaizora Origins.
+            </p>
+
+        </div>
+
+
+        <div class="social-grid">
+
+
+            <!-- YOUTUBE -->
+
+            <div class="social-card">
+
+                <div>
+
+                    <div class="social-name">
+                        YouTube
+                    </div>
+
+                    <div class="social-username">
+                        @YonoSoyAnthony
+                    </div>
+
+                    <div class="social-description">
+                        Videos, contenido de Minecraft,
+                        directos y mucho más.
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://www.youtube.com/@YonoSoyAnthony"
+                    target="_blank"
+                    class="social-button"
+                >
+                    Visitar canal
+                </a>
+
+            </div>
+
+
+            <!-- KICK -->
+
+            <div class="social-card">
+
+                <div>
+
+                    <div class="social-name">
+                        Kick
+                    </div>
+
+                    <div class="social-username">
+                        @YoSoyAnthonyyy
+                    </div>
+
+                    <div class="social-description">
+                        Directos, Minecraft y contenido
+                        en vivo.
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://kick.com/yosoyanthonyyy"
+                    target="_blank"
+                    class="social-button"
+                >
+                    Ver canal
+                </a>
+
+            </div>
+
+
+            <!-- TIKTOK -->
+
+            <div class="social-card">
+
+                <div>
+
+                    <div class="social-name">
+                        TikTok
+                    </div>
+
+                    <div class="social-username">
+                        @YoSoyAnthonyyy
+                    </div>
+
+                    <div class="social-description">
+                        Clips, momentos destacados
+                        y contenido corto.
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://www.tiktok.com/@yosoyanthonyyy?lang=es-419"
+                    target="_blank"
+                    class="social-button"
+                >
+                    Ver perfil
+                </a>
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+
+            <div class="social-card">
+
+                <div>
+
+                    <div class="social-name">
+                        Instagram
+                    </div>
+
+                    <div class="social-username">
+                        @YonoSoyAnthony
+                    </div>
+
+                    <div class="social-description">
+                        Fotos, historias, novedades
+                        y contenido personal.
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://www.instagram.com/yonosoyanthony/"
+                    target="_blank"
+                    class="social-button"
+                >
+                    Ver perfil
+                </a>
 
             </div>
 
