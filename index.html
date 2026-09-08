@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -231,16 +233,6 @@
         }
 
 
-        .top-buttons {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 10px;
-        }
-
-
         .discord-button {
 
             display: inline-flex;
@@ -281,51 +273,6 @@
             box-shadow:
                 0 12px 40px
                 rgba(139,92,246,0.35);
-        }
-
-
-        .donation-button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding:
-                11px 19px;
-
-            border-radius: 8px;
-
-            background:
-                rgba(255,255,255,0.07);
-
-            border:
-                1px solid
-                rgba(255,255,255,0.14);
-
-            color: white !important;
-
-            text-decoration: none;
-
-            font-size: 13px;
-
-            font-weight: 900;
-
-            transition: 0.25s;
-        }
-
-
-        .donation-button:hover {
-
-            transform:
-                translateY(-2px);
-
-            background:
-                rgba(255,255,255,0.12);
-
-            border-color:
-                rgba(255,255,255,0.28);
         }
 
 
@@ -745,26 +692,24 @@
         }
 
 
-        .discount-notice {
+        .rank-notice {
 
             max-width: 1150px;
 
-            margin:
-                -25px 0 35px;
+            margin-bottom: 30px;
 
-            padding:
-                17px 22px;
+            padding: 18px 22px;
 
             border:
                 1px solid
-                rgba(169,130,255,0.25);
+                rgba(169,130,255,0.22);
 
             border-radius: 10px;
 
             background:
-                rgba(169,130,255,0.06);
+                rgba(147,101,255,0.06);
 
-            color: #bcbcc3;
+            color: #aaaab1;
 
             font-size: 13px;
 
@@ -772,9 +717,9 @@
         }
 
 
-        .discount-notice strong {
+        .rank-notice strong {
 
-            color: #b49cff;
+            color: #c4afff;
         }
 
 
@@ -793,7 +738,7 @@
 
         .rank {
 
-            min-height: 315px;
+            min-height: 290px;
 
             display: flex;
 
@@ -862,35 +807,41 @@
         }
 
 
-        .rank-price-area {
+        .rank-price {
 
-            margin-top: 22px;
+            font-size: 26px;
+
+            font-weight: 950;
+
+            margin:
+                22px 0 13px;
         }
 
 
-        .rank-old-price {
+        .old-price {
 
-            color: #696b72;
+            display: block;
 
-            font-size: 13px;
+            font-size: 14px;
 
             font-weight: 700;
 
-            text-decoration:
-                line-through;
+            color: #777a81;
 
-            margin-bottom: 4px;
+            text-decoration: line-through;
+
+            margin-bottom: 3px;
         }
 
 
-        .discount-label {
+        .discount {
 
             display: inline-block;
 
             padding:
                 4px 7px;
 
-            margin-bottom: 7px;
+            margin-bottom: 8px;
 
             border-radius: 5px;
 
@@ -899,21 +850,11 @@
 
             color: #48df8b;
 
-            font-size: 9px;
+            font-size: 10px;
 
             font-weight: 900;
 
             letter-spacing: 0.5px;
-        }
-
-
-        .rank-price {
-
-            font-size: 26px;
-
-            font-weight: 950;
-
-            margin-bottom: 13px;
         }
 
 
@@ -1235,14 +1176,10 @@
            RESPONSIVE
         ===================================================== */
 
-        @media (max-width: 1100px) {
+        @media (max-width: 1000px) {
 
             nav ul {
                 display: none;
-            }
-
-            .top-buttons {
-                margin-left: auto;
             }
 
             .ranks,
@@ -1263,31 +1200,6 @@
 
 
         @media (max-width: 600px) {
-
-            nav {
-
-                padding:
-                    0 5%;
-            }
-
-            .logo {
-
-                font-size: 17px;
-            }
-
-            .top-buttons {
-
-                gap: 6px;
-            }
-
-            .discord-button,
-            .donation-button {
-
-                padding:
-                    9px 10px;
-
-                font-size: 9px;
-            }
 
             .hero {
 
@@ -1332,6 +1244,7 @@
         }
 
     </style>
+
 </head>
 
 
@@ -1393,25 +1306,14 @@
         </ul>
 
 
-        <div class="top-buttons">
-
-            <a
-                href="#redes"
-                class="discord-button"
-            >
-                REDES
-            </a>
-
-
-            <a
-                href="https://www.paypal.com/invoice/p/#3YXT5YHUGCTP5VYK"
-                target="_blank"
-                class="donation-button"
-            >
-                DONACIONES
-            </a>
-
-        </div>
+        <!-- SOLO DONACIONES -->
+        <a
+            href="https://www.paypal.com/invoice/p/#3YXT5YHUGCTP5VYK"
+            target="_blank"
+            class="discord-button"
+        >
+            DONACIONES
+        </a>
 
     </nav>
 
@@ -1627,17 +1529,18 @@
         </div>
 
 
-        <div class="discount-notice">
+        <!-- AVISO DE COMPRA -->
 
-            <strong>🔥 OFERTA ESPECIAL:</strong>
+        <div class="rank-notice">
 
-            Todos los rangos disponibles cuentan actualmente
-            con un <strong>20% de descuento</strong>.
+            <strong>
+                IMPORTANTE:
+            </strong>
 
             Una vez completes el pago, toma una captura de pantalla
-            de la confirmación y abre un ticket en nuestro Discord oficial.
-            Nuestro equipo verificará el pago y te entregará tu rango
-            lo antes posible.
+            de la confirmación y abre un ticket en el Discord oficial
+            de Kaizora Origins. Nuestro equipo verificará el pago y
+            te otorgará tu rango lo antes posible.
 
         </div>
 
@@ -1645,9 +1548,7 @@
         <div class="ranks">
 
 
-            <!-- =================================================
-                 ORIGIN
-            ================================================= -->
+            <!-- ORIGIN -->
 
             <div class="rank origin">
 
@@ -1665,15 +1566,15 @@
 
                 </div>
 
-                <div class="rank-price-area">
+                <div>
 
-                    <div class="discount-label">
-                        20% DE DESCUENTO
-                    </div>
-
-                    <div class="rank-old-price">
+                    <span class="old-price">
                         $4.99
-                    </div>
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
 
                     <div class="rank-price">
                         $2.99
@@ -1692,9 +1593,7 @@
             </div>
 
 
-            <!-- =================================================
-                 ELITE
-            ================================================= -->
+            <!-- ELITE -->
 
             <div class="rank elite">
 
@@ -1712,15 +1611,15 @@
 
                 </div>
 
-                <div class="rank-price-area">
+                <div>
 
-                    <div class="discount-label">
-                        20% DE DESCUENTO
-                    </div>
-
-                    <div class="rank-old-price">
+                    <span class="old-price">
                         $6.99
-                    </div>
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
 
                     <div class="rank-price">
                         $4.99
@@ -1739,9 +1638,7 @@
             </div>
 
 
-            <!-- =================================================
-                 CELESTIAL
-            ================================================= -->
+            <!-- CELESTIAL -->
 
             <div class="rank celestial">
 
@@ -1758,15 +1655,15 @@
 
                 </div>
 
-                <div class="rank-price-area">
+                <div>
 
-                    <div class="discount-label">
-                        20% DE DESCUENTO
-                    </div>
-
-                    <div class="rank-old-price">
+                    <span class="old-price">
                         $9.99
-                    </div>
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
 
                     <div class="rank-price">
                         $7.99
@@ -1785,9 +1682,7 @@
             </div>
 
 
-            <!-- =================================================
-                 MAJESTAD
-            ================================================= -->
+            <!-- MAJESTAD -->
 
             <div class="rank majestad">
 
@@ -1804,15 +1699,15 @@
 
                 </div>
 
-                <div class="rank-price-area">
+                <div>
 
-                    <div class="discount-label">
-                        20% DE DESCUENTO
-                    </div>
-
-                    <div class="rank-old-price">
+                    <span class="old-price">
                         $13.99
-                    </div>
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
 
                     <div class="rank-price">
                         $11.99
@@ -1831,9 +1726,7 @@
             </div>
 
 
-            <!-- =================================================
-                 GUARDIAN
-            ================================================= -->
+            <!-- GUARDIAN -->
 
             <div class="rank guardian">
 
@@ -1851,15 +1744,15 @@
 
                 </div>
 
-                <div class="rank-price-area">
+                <div>
 
-                    <div class="discount-label">
-                        20% DE DESCUENTO
-                    </div>
-
-                    <div class="rank-old-price">
+                    <span class="old-price">
                         $17.99
-                    </div>
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
 
                     <div class="rank-price">
                         $15.99
@@ -1878,9 +1771,7 @@
             </div>
 
 
-            <!-- =================================================
-                 SEMIDIOS
-            ================================================= -->
+            <!-- SEMIDIOS -->
 
             <div class="rank semidios">
 
@@ -1897,15 +1788,15 @@
 
                 </div>
 
-                <div class="rank-price-area">
+                <div>
 
-                    <div class="discount-label">
-                        20% DE DESCUENTO
-                    </div>
-
-                    <div class="rank-old-price">
+                    <span class="old-price">
                         $26.99
-                    </div>
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
 
                     <div class="rank-price">
                         $24.99
@@ -1924,9 +1815,7 @@
             </div>
 
 
-            <!-- =================================================
-                 DIOS
-            ================================================= -->
+            <!-- DIOS -->
 
             <div class="rank dios">
 
@@ -1943,15 +1832,15 @@
 
                 </div>
 
-                <div class="rank-price-area">
+                <div>
 
-                    <div class="discount-label">
-                        20% DE DESCUENTO
-                    </div>
-
-                    <div class="rank-old-price">
+                    <span class="old-price">
                         $36.99
-                    </div>
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
 
                     <div class="rank-price">
                         $34.99
@@ -1970,9 +1859,7 @@
             </div>
 
 
-            <!-- =================================================
-                 PRÓXIMAMENTE
-            ================================================= -->
+            <!-- PRÓXIMAMENTE -->
 
             <div class="rank soon">
 
@@ -1989,7 +1876,7 @@
 
                 </div>
 
-                <div class="rank-price-area">
+                <div>
 
                     <div class="rank-price">
                         ---
@@ -2265,6 +2152,7 @@
                 ".minecraft-background"
             );
 
+
         const light =
             document.getElementById(
                 "light"
@@ -2278,6 +2166,7 @@
                 const x =
                     event.clientX /
                     window.innerWidth;
+
 
                 const y =
                     event.clientY /
@@ -2311,4 +2200,5 @@
 
 
 </body>
+
 </html>
