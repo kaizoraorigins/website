@@ -692,57 +692,36 @@
 
         /* AVISO DE COMPRA */
 
-        .purchase-notice {
+        .rank-notice {
 
             max-width: 1150px;
 
-            margin-bottom: 35px;
+            margin:
+                -20px 0 35px;
 
-            padding: 22px 25px;
+            padding:
+                18px 22px;
 
             border:
                 1px solid
                 rgba(169,130,255,0.22);
 
-            border-left:
-                3px solid
-                #a982ff;
-
             border-radius: 10px;
 
             background:
-                linear-gradient(
-                    120deg,
-                    rgba(169,130,255,0.08),
-                    rgba(255,255,255,0.025)
-                );
+                rgba(169,130,255,0.06);
 
-            backdrop-filter:
-                blur(10px);
-        }
-
-
-        .purchase-notice strong {
-
-            display: block;
-
-            color: #c9b8ff;
-
-            font-size: 14px;
-
-            font-weight: 900;
-
-            margin-bottom: 7px;
-        }
-
-
-        .purchase-notice p {
-
-            color: #8d8f96;
+            color: #a7a7ae;
 
             font-size: 13px;
 
-            line-height: 1.7;
+            line-height: 1.6;
+        }
+
+
+        .rank-notice strong {
+
+            color: #b49cff;
         }
 
 
@@ -830,14 +809,69 @@
         }
 
 
+        /* =====================================================
+           PRECIO CON DESCUENTO
+        ===================================================== */
+
+        .rank-price-box {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+            margin:
+                22px 0 13px;
+        }
+
+
+        .rank-discount {
+
+            display: inline-block;
+
+            padding:
+                4px 7px;
+
+            margin-bottom: 5px;
+
+            border-radius: 5px;
+
+            background:
+                rgba(72,223,139,0.12);
+
+            color: #48df8b;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.7px;
+        }
+
+
+        .rank-old-price {
+
+            color: #6f7178;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            text-decoration:
+                line-through;
+
+            text-decoration-thickness: 2px;
+
+            margin-bottom: 2px;
+        }
+
+
         .rank-price {
 
             font-size: 26px;
 
             font-weight: 950;
-
-            margin:
-                22px 0 13px;
         }
 
 
@@ -1509,22 +1543,19 @@
         </div>
 
 
-        <!-- =================================================
-             AVISO DE COMPRA
-        ================================================= -->
+        <!-- AVISO -->
 
-        <div class="purchase-notice">
+        <div class="rank-notice">
 
-            <strong>
-                ¿Ya realizaste tu compra?
-            </strong>
+            <strong>🔥 PRECIOS DE APERTURA:</strong>
 
-            <p>
-                Una vez completado el pago, toma una captura de pantalla
-                de tu comprobante y abre un ticket en nuestro Discord oficial.
-                Nuestro equipo verificará tu compra y te otorgará el rango
-                correspondiente en el menor tiempo posible.
-            </p>
+            Estos precios corresponden a la etapa inicial de
+            Kaizora Origins y podrían aumentar próximamente.
+
+            Una vez completes el pago, toma una captura de pantalla
+            de tu comprobante y abre un ticket en el Discord oficial.
+            Nuestro equipo verificará el pago y te otorgará tu rango
+            lo antes posible.
 
         </div>
 
@@ -1532,7 +1563,9 @@
         <div class="ranks">
 
 
-            <!-- ORIGIN -->
+            <!-- =================================================
+                 ORIGIN
+            ================================================== -->
 
             <div class="rank origin">
 
@@ -1550,11 +1583,25 @@
 
                 </div>
 
+
                 <div>
 
-                    <div class="rank-price">
-                        $2.99
+                    <div class="rank-price-box">
+
+                        <span class="rank-discount">
+                            20% OFF
+                        </span>
+
+                        <span class="rank-old-price">
+                            $4.98
+                        </span>
+
+                        <div class="rank-price">
+                            $2.99
+                        </div>
+
                     </div>
+
 
                     <a
                         href="https://www.paypal.com/invoice/p/#JUVJMSVVEHNNPD6M"
@@ -1569,7 +1616,9 @@
             </div>
 
 
-            <!-- ELITE -->
+            <!-- =================================================
+                 ELITE
+            ================================================== -->
 
             <div class="rank elite">
 
@@ -1587,11 +1636,25 @@
 
                 </div>
 
+
                 <div>
 
-                    <div class="rank-price">
-                        $4.99
+                    <div class="rank-price-box">
+
+                        <span class="rank-discount">
+                            20% OFF
+                        </span>
+
+                        <span class="rank-old-price">
+                            $6.98
+                        </span>
+
+                        <div class="rank-price">
+                            $4.99
+                        </div>
+
                     </div>
+
 
                     <a
                         href="https://www.paypal.com/invoice/p/#BQZMWEWCDUFNLUPN"
@@ -1606,7 +1669,9 @@
             </div>
 
 
-            <!-- CELESTIAL -->
+            <!-- =================================================
+                 CELESTIAL
+            ================================================== -->
 
             <div class="rank celestial">
 
@@ -1623,11 +1688,25 @@
 
                 </div>
 
+
                 <div>
 
-                    <div class="rank-price">
-                        $7.99
+                    <div class="rank-price-box">
+
+                        <span class="rank-discount">
+                            20% OFF
+                        </span>
+
+                        <span class="rank-old-price">
+                            $9.98
+                        </span>
+
+                        <div class="rank-price">
+                            $7.99
+                        </div>
+
                     </div>
+
 
                     <a
                         href="https://www.paypal.com/invoice/p/#W7F9ZWMW86VEXQHJ"
@@ -1642,7 +1721,9 @@
             </div>
 
 
-            <!-- MAJESTAD -->
+            <!-- =================================================
+                 MAJESTAD
+            ================================================== -->
 
             <div class="rank majestad">
 
@@ -1659,11 +1740,25 @@
 
                 </div>
 
+
                 <div>
 
-                    <div class="rank-price">
-                        $11.99
+                    <div class="rank-price-box">
+
+                        <span class="rank-discount">
+                            20% OFF
+                        </span>
+
+                        <span class="rank-old-price">
+                            $13.98
+                        </span>
+
+                        <div class="rank-price">
+                            $11.99
+                        </div>
+
                     </div>
+
 
                     <a
                         href="https://www.paypal.com/invoice/p/#BQK374XAZDU6RTXA"
@@ -1678,7 +1773,9 @@
             </div>
 
 
-            <!-- GUARDIAN -->
+            <!-- =================================================
+                 GUARDIAN
+            ================================================== -->
 
             <div class="rank guardian">
 
@@ -1696,11 +1793,25 @@
 
                 </div>
 
+
                 <div>
 
-                    <div class="rank-price">
-                        $15.99
+                    <div class="rank-price-box">
+
+                        <span class="rank-discount">
+                            20% OFF
+                        </span>
+
+                        <span class="rank-old-price">
+                            $17.98
+                        </span>
+
+                        <div class="rank-price">
+                            $15.99
+                        </div>
+
                     </div>
+
 
                     <a
                         href="https://www.paypal.com/invoice/p/#JGX4ZQA5NKSEYVG3"
@@ -1715,7 +1826,9 @@
             </div>
 
 
-            <!-- SEMIDIOS -->
+            <!-- =================================================
+                 SEMIDIOS
+            ================================================== -->
 
             <div class="rank semidios">
 
@@ -1732,11 +1845,25 @@
 
                 </div>
 
+
                 <div>
 
-                    <div class="rank-price">
-                        $24.99
+                    <div class="rank-price-box">
+
+                        <span class="rank-discount">
+                            20% OFF
+                        </span>
+
+                        <span class="rank-old-price">
+                            $26.98
+                        </span>
+
+                        <div class="rank-price">
+                            $24.99
+                        </div>
+
                     </div>
+
 
                     <a
                         href="https://www.paypal.com/invoice/p/#B3L9RUEAVMG3U3CZ"
@@ -1751,7 +1878,9 @@
             </div>
 
 
-            <!-- DIOS -->
+            <!-- =================================================
+                 DIOS
+            ================================================== -->
 
             <div class="rank dios">
 
@@ -1768,11 +1897,25 @@
 
                 </div>
 
+
                 <div>
 
-                    <div class="rank-price">
-                        $34.99
+                    <div class="rank-price-box">
+
+                        <span class="rank-discount">
+                            20% OFF
+                        </span>
+
+                        <span class="rank-old-price">
+                            $36.98
+                        </span>
+
+                        <div class="rank-price">
+                            $34.99
+                        </div>
+
                     </div>
+
 
                     <a
                         href="https://www.paypal.com/invoice/p/#J9CWUBGCQ5MLVBDB"
@@ -1787,7 +1930,9 @@
             </div>
 
 
-            <!-- PRÓXIMAMENTE -->
+            <!-- =================================================
+                 PRÓXIMAMENTE
+            ================================================== -->
 
             <div class="rank soon">
 
@@ -1804,11 +1949,21 @@
 
                 </div>
 
+
                 <div>
 
-                    <div class="rank-price">
-                        ---
+                    <div class="rank-price-box">
+
+                        <span class="rank-discount">
+                            PRÓXIMAMENTE
+                        </span>
+
+                        <div class="rank-price">
+                            ---
+                        </div>
+
                     </div>
+
 
                     <span class="rank-buy">
                         Próximamente
@@ -2121,6 +2276,7 @@
         );
 
     </script>
+
 
 </body>
 </html>
