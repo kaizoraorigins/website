@@ -947,7 +947,7 @@
             display: grid;
 
             grid-template-columns:
-                repeat(3, 1fr);
+                repeat(4, 1fr);
 
             gap: 18px;
         }
@@ -978,9 +978,6 @@
         }
 
         .rank-name {
-            color:
-                var(--morado-claro);
-
             font-size: 13px;
 
             font-weight: 900;
@@ -1013,13 +1010,9 @@
                 10px 17px;
 
             border:
-                1px solid
-                rgba(139,92,246,0.25);
+                1px solid;
 
             border-radius: 6px;
-
-            color:
-                var(--morado-claro);
 
             font-size: 11px;
 
@@ -1163,6 +1156,14 @@
            RESPONSIVE
         ===================================================== */
 
+        @media (max-width: 1000px) {
+
+            .ranks {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 850px) {
 
             .nav-links {
@@ -1182,7 +1183,8 @@
             }
 
             .ranks {
-                grid-template-columns: 1fr;
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .world-card {
@@ -1250,6 +1252,10 @@
 
             .hero-buttons {
                 width: 100%;
+            }
+
+            .ranks {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1658,16 +1664,16 @@
             <div class="section-header">
 
                 <div class="section-label">
-                    PROGRESIÓN
+                    RANGOS
                 </div>
 
                 <h2>
-                    Encuentra tu rango.
+                    Elige tu rango.
                 </h2>
 
                 <p>
-                    Una progresión diseñada para reconocer
-                    la dedicación de nuestra comunidad.
+                    Asciende en Kaizora Origins y desbloquea
+                    nuevas ventajas dentro del servidor.
                 </p>
 
             </div>
@@ -1676,22 +1682,65 @@
             <div class="ranks">
 
 
+                <!-- DEFAULT -->
+
                 <div class="rank">
 
-                    <div class="rank-name">
-                        INICIO
+                    <div
+                        class="rank-name"
+                        style="color: #AAAAAA;"
+                    >
+                        ⚪ DEFAULT
                     </div>
 
-                    <h3>
-                        Aventurero
+                    <h3 style="color: #AAAAAA;">
+                        DEFAULT
                     </h3>
 
                     <p>
-                        Tu primera etapa dentro
-                        de Kaizora Origins.
+                        Tu comienzo en Kaizora Origins.
                     </p>
 
-                    <span class="rank-button">
+                    <span
+                        class="rank-button"
+                        style="
+                            color: #AAAAAA;
+                            border-color: #AAAAAA;
+                        "
+                    >
+                        GRATIS
+                    </span>
+
+                </div>
+
+
+
+                <!-- ORIGIN -->
+
+                <div class="rank">
+
+                    <div
+                        class="rank-name"
+                        style="color: #FFFFFF;"
+                    >
+                        ⚪✨ ORIGIN
+                    </div>
+
+                    <h3 style="color: #FFFFFF;">
+                        ORIGIN
+                    </h3>
+
+                    <p>
+                        El primer paso para comenzar a destacar.
+                    </p>
+
+                    <span
+                        class="rank-button"
+                        style="
+                            color: #FFFFFF;
+                            border-color: #FFFFFF;
+                        "
+                    >
                         PRÓXIMAMENTE
                     </span>
 
@@ -1699,22 +1748,32 @@
 
 
 
+                <!-- ELITE -->
+
                 <div class="rank">
 
-                    <div class="rank-name">
-                        PROGRESO
+                    <div
+                        class="rank-name"
+                        style="color: #3B82F6;"
+                    >
+                        🔵 ELITE
                     </div>
 
-                    <h3>
-                        Explorador
+                    <h3 style="color: #3B82F6;">
+                        ELITE
                     </h3>
 
                     <p>
-                        Para quienes han comenzado
-                        a dejar su huella en el mundo.
+                        Un rango para quienes buscan ir un paso más allá.
                     </p>
 
-                    <span class="rank-button">
+                    <span
+                        class="rank-button"
+                        style="
+                            color: #3B82F6;
+                            border-color: #3B82F6;
+                        "
+                    >
                         PRÓXIMAMENTE
                     </span>
 
@@ -1722,22 +1781,164 @@
 
 
 
+                <!-- CELESTIAL -->
+
                 <div class="rank">
 
-                    <div class="rank-name">
-                        ÉLITE
+                    <div
+                        class="rank-name"
+                        style="color: #22D3EE;"
+                    >
+                        🩵 CELESTIAL
                     </div>
 
-                    <h3>
-                        Leyenda
+                    <h3 style="color: #22D3EE;">
+                        CELESTIAL
                     </h3>
 
                     <p>
-                        Un rango reservado para
-                        quienes alcanzan el siguiente nivel.
+                        Un rango reservado para jugadores destacados.
                     </p>
 
-                    <span class="rank-button">
+                    <span
+                        class="rank-button"
+                        style="
+                            color: #22D3EE;
+                            border-color: #22D3EE;
+                        "
+                    >
+                        PRÓXIMAMENTE
+                    </span>
+
+                </div>
+
+
+
+                <!-- MAJESTAD -->
+
+                <div class="rank">
+
+                    <div
+                        class="rank-name"
+                        style="color: #F5C542;"
+                    >
+                        🟡 MAJESTAD
+                    </div>
+
+                    <h3 style="color: #F5C542;">
+                        MAJESTAD
+                    </h3>
+
+                    <p>
+                        Prestigio, reconocimiento y poder dentro de Kaizora.
+                    </p>
+
+                    <span
+                        class="rank-button"
+                        style="
+                            color: #F5C542;
+                            border-color: #F5C542;
+                        "
+                    >
+                        PRÓXIMAMENTE
+                    </span>
+
+                </div>
+
+
+
+                <!-- GUARDIAN -->
+
+                <div class="rank">
+
+                    <div
+                        class="rank-name"
+                        style="color: #22C55E;"
+                    >
+                        🟢 GUARDIAN
+                    </div>
+
+                    <h3 style="color: #22C55E;">
+                        GUARDIAN
+                    </h3>
+
+                    <p>
+                        Uno de los rangos más poderosos de Kaizora.
+                    </p>
+
+                    <span
+                        class="rank-button"
+                        style="
+                            color: #22C55E;
+                            border-color: #22C55E;
+                        "
+                    >
+                        PRÓXIMAMENTE
+                    </span>
+
+                </div>
+
+
+
+                <!-- SEMIDIOS -->
+
+                <div class="rank">
+
+                    <div
+                        class="rank-name"
+                        style="color: #D946EF;"
+                    >
+                        🟣 SEMIDIOS
+                    </div>
+
+                    <h3 style="color: #D946EF;">
+                        SEMIDIOS
+                    </h3>
+
+                    <p>
+                        Poder reservado para quienes han alcanzado otro nivel.
+                    </p>
+
+                    <span
+                        class="rank-button"
+                        style="
+                            color: #D946EF;
+                            border-color: #D946EF;
+                        "
+                    >
+                        PRÓXIMAMENTE
+                    </span>
+
+                </div>
+
+
+
+                <!-- DIOS -->
+
+                <div class="rank">
+
+                    <div
+                        class="rank-name"
+                        style="color: #FF3030;"
+                    >
+                        🔴 DIOS
+                    </div>
+
+                    <h3 style="color: #FF3030;">
+                        DIOS
+                    </h3>
+
+                    <p>
+                        El rango máximo de Kaizora Origins.
+                    </p>
+
+                    <span
+                        class="rank-button"
+                        style="
+                            color: #FF3030;
+                            border-color: #FF3030;
+                        "
+                    >
                         PRÓXIMAMENTE
                     </span>
 
