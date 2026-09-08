@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kaizora Origins | Minecraft</title>
+    <title>Kaizora Origins</title>
 
-    <meta name="description"
-          content="Kaizora Origins — Un nuevo mundo, una nueva historia.">
+    <meta name="description" content="Kaizora Origins - Un nuevo mundo está esperando.">
 
     <style>
-
-        /* =====================================================
-           RESET
-        ===================================================== */
 
         * {
             margin: 0;
@@ -27,980 +22,668 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #07090a;
-            color: white;
+            background: #08090d;
+            color: #ffffff;
             overflow-x: hidden;
         }
 
-
-        /* =====================================================
-           FONDO PRINCIPAL DE MINECRAFT
-        ===================================================== */
-
-        .minecraft-background {
-
-            position: fixed;
-
-            inset: 0;
-
-            z-index: -10;
-
-            background-image:
-                linear-gradient(
-                    90deg,
-                    rgba(5, 7, 8, 0.88) 0%,
-                    rgba(5, 7, 8, 0.62) 42%,
-                    rgba(5, 7, 8, 0.42) 100%
-                ),
-                linear-gradient(
-                    180deg,
-                    rgba(0,0,0,0.20) 0%,
-                    rgba(0,0,0,0.50) 100%
-                ),
-                url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=2400&q=90");
-
-            background-size: cover;
-
-            background-position: center;
-
-            background-repeat: no-repeat;
-
-            transform: scale(1.04);
-
-            transition:
-                transform 0.8s ease-out;
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
+        /* =========================
+           FONDO
+        ========================= */
 
-        /* Oscurecimiento inferior */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
 
-        .minecraft-background::after {
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(139, 92, 246, 0.13),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                );
 
+            background-size:
+                auto,
+                55px 55px,
+                55px 55px;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: rgba(8, 9, 13, 0.82);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #8b5cf6;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #a5a5ad;
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-button {
+            padding: 11px 19px;
+
+            background: #8b5cf6;
+            border-radius: 8px;
+
+            color: white !important;
+
+            transition: 0.25s;
+        }
+
+        .nav-button:hover {
+            background: #7c3aed;
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 120px 20px 80px;
+
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+            width: 600px;
+            height: 600px;
+
+            background: radial-gradient(
+                circle,
+                rgba(139,92,246,0.12),
+                transparent 70%
+            );
+
+            filter: blur(20px);
+
+            z-index: -1;
+        }
+
+        .hero-tag {
+            color: #9b7bea;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 92px);
+
+            line-height: 1;
+
+            font-weight: 900;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: #8b5cf6;
+        }
+
+        .hero p {
+            max-width: 620px;
+
+            color: #9b9ba4;
+
+            font-size: 18px;
+            line-height: 1.7;
+
+            margin-bottom: 38px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button-primary,
+        .button-secondary {
+            padding: 14px 25px;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+            font-weight: 800;
+
+            transition: 0.25s;
+        }
+
+        .button-primary {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #7c3aed;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid #30303a;
+            color: white;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .button-secondary:hover {
+            border-color: #8b5cf6;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        section {
+            padding: 110px 7%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-tag {
+            display: block;
+
+            color: #9b7bea;
+
+            font-size: 12px;
+            font-weight: 900;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 14px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(36px, 5vw, 56px);
+
+            letter-spacing: -2px;
+
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            max-width: 650px;
+            margin: auto;
+
+            color: #85858e;
+
+            line-height: 1.7;
+        }
+
+        /* =========================
+           CARACTERÍSTICAS
+        ========================= */
+
+        .features {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .feature {
+            padding: 30px;
+
+            background: #0d0e14;
+
+            border: 1px solid #20212a;
+
+            border-radius: 14px;
+
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(139,92,246,0.5);
+        }
+
+        .feature h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .feature p {
+            color: #85858e;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           SERVIDOR
+        ========================= */
+
+        .server-box {
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 45px;
+
+            text-align: center;
+
+            background: #0d0e14;
+
+            border: 1px solid #20212a;
+
+            border-radius: 16px;
+        }
+
+        .server-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            color: #85858e;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+
+            background: #777;
+            border-radius: 50%;
+        }
+
+        .server-box h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .server-box p {
+            color: #85858e;
+            margin-bottom: 25px;
+        }
+
+        .ip-box {
+            display: inline-block;
+
+            padding: 14px 22px;
+
+            background: #08090d;
+
+            border: 1px solid #282832;
+
+            border-radius: 8px;
+
+            color: #b9b9c1;
+
+            font-family: monospace;
+
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           RANGOS
+        ========================= */
+
+        .rank-grid {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .rank-card {
+            position: relative;
+
+            padding: 32px 25px;
+
+            min-height: 285px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            background: #0d0e14;
+
+            border: 1px solid #24252e;
+
+            border-radius: 14px;
+
+            transition: 0.3s;
+
+            overflow: hidden;
+        }
+
+        .rank-card::before {
             content: "";
 
             position: absolute;
 
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    transparent 35%,
-                    rgba(4,6,7,0.90) 100%
-                );
-
-        }
-
-
-        /* =====================================================
-           EFECTO DE LUZ
-        ===================================================== */
-
-        .light-effect {
-
-            position: fixed;
-
-            width: 550px;
-
-            height: 550px;
-
-            border-radius: 50%;
-
-            pointer-events: none;
-
-            z-index: -5;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(255,220,145,0.10),
-                    transparent 68%
-                );
-
-            transform:
-                translate(-50%, -50%);
-
-            transition:
-                left 0.25s ease-out,
-                top 0.25s ease-out;
-        }
-
-
-        /* =====================================================
-           NAVEGACIÓN
-        ===================================================== */
-
-        nav {
-
-            position: fixed;
-
             top: 0;
+            left: 15%;
+            right: 15%;
 
-            left: 0;
+            height: 2px;
 
-            width: 100%;
+            background: var(--rank-color);
 
-            height: 78px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            padding:
-                0 6%;
-
-            background:
-                linear-gradient(
-                    rgba(5,7,8,0.82),
-                    rgba(5,7,8,0.35)
-                );
-
-            backdrop-filter: blur(12px);
-
-            border-bottom:
-                1px solid rgba(255,255,255,0.08);
-
-            z-index: 100;
+            opacity: 0.8;
         }
 
+        .rank-card:hover {
+            transform: translateY(-6px);
 
-        .logo {
+            border-color: var(--rank-color);
 
-            font-size: 22px;
-
-            font-weight: 900;
-
-            letter-spacing: 1px;
+            box-shadow:
+                0 10px 40px rgba(0,0,0,0.35);
         }
 
-
-        .logo span {
-
-            color: #b49cff;
-        }
-
-
-        nav ul {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 34px;
-
-            list-style: none;
-
-            margin-left: auto;
-
-            margin-right: 28px;
-        }
-
-
-        nav ul a {
-
-            color: #c5c5c9;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            font-weight: 700;
-
-            transition: 0.25s;
-        }
-
-
-        nav ul a:hover {
-
-            color: white;
-        }
-
-
-        .discord-button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding:
-                11px 19px;
-
-            border-radius: 8px;
-
-            background:
-                rgba(139,92,246,0.95);
-
-            color: white !important;
-
-            text-decoration: none;
+        .rank-name {
+            color: var(--rank-color);
 
             font-size: 13px;
-
-            font-weight: 900;
-
-            box-shadow:
-                0 8px 30px
-                rgba(139,92,246,0.22);
-
-            transition: 0.25s;
-        }
-
-
-        .discord-button:hover {
-
-            transform:
-                translateY(-2px);
-
-            box-shadow:
-                0 12px 40px
-                rgba(139,92,246,0.35);
-        }
-
-
-        /* =====================================================
-           HERO
-        ===================================================== */
-
-        .hero {
-
-            min-height: 100vh;
-
-            display: flex;
-
-            align-items: center;
-
-            padding:
-                130px 8% 100px;
-        }
-
-
-        .hero-content {
-
-            max-width: 720px;
-
-            text-align: left;
-        }
-
-
-        .hero-label {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 9px;
-
-            padding:
-                8px 13px;
-
-            margin-bottom: 22px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.13);
-
-            border-radius: 7px;
-
-            background:
-                rgba(0,0,0,0.32);
-
-            backdrop-filter: blur(10px);
-
-            color: #d0d0d3;
-
-            font-size: 11px;
 
             font-weight: 900;
 
             letter-spacing: 2px;
 
-            text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
+        .rank-card h3 {
+            color: var(--rank-color);
 
-        .online-dot {
+            font-size: 27px;
 
-            width: 7px;
+            margin-bottom: 10px;
 
-            height: 7px;
-
-            border-radius: 50%;
-
-            background: #48df8b;
-
-            box-shadow:
-                0 0 12px
-                rgba(72,223,139,0.8);
+            letter-spacing: 0.5px;
         }
 
-
-        .hero h1 {
-
-            font-size:
-                clamp(58px, 8vw, 108px);
-
-            line-height:
-                0.90;
-
-            letter-spacing:
-                -5px;
-
-            font-weight: 950;
-
-            margin-bottom: 28px;
-
-            text-shadow:
-                0 5px 35px
-                rgba(0,0,0,0.65);
-        }
-
-
-        .hero h1 span {
-
-            color: #a982ff;
-        }
-
-
-        .hero-description {
-
-            max-width: 650px;
-
-            color: #c4c4c8;
-
-            font-size: 18px;
-
-            line-height: 1.7;
-
-            text-shadow:
-                0 2px 12px
-                rgba(0,0,0,0.8);
-        }
-
-
-        .hero-buttons {
-
-            display: flex;
-
-            gap: 13px;
-
-            margin-top: 34px;
-
-            flex-wrap: wrap;
-        }
-
-
-        .button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding:
-                15px 23px;
-
-            border-radius: 8px;
-
-            text-decoration: none;
+        .rank-card p {
+            color: #777781;
 
             font-size: 13px;
 
+            line-height: 1.6;
+
+            min-height: 42px;
+
+            margin-bottom: 20px;
+        }
+
+        .rank-price {
+            color: #ffffff;
+
+            font-size: 23px;
+
             font-weight: 900;
+
+            margin-bottom: 17px;
+        }
+
+        .rank-button {
+            padding: 10px 18px;
+
+            border: 1px solid var(--rank-color);
+
+            border-radius: 7px;
+
+            color: var(--rank-color);
+
+            background: transparent;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.5px;
 
             transition: 0.25s;
         }
 
-
-        .primary-button {
-
-            background: #9365ff;
-
-            color: white;
-
-            box-shadow:
-                0 12px 35px
-                rgba(147,101,255,0.25);
+        .rank-button:hover {
+            background: var(--rank-color);
+            color: #08090d;
         }
-
-
-        .primary-button:hover {
-
-            transform:
-                translateY(-3px);
-
-            box-shadow:
-                0 18px 45px
-                rgba(147,101,255,0.4);
-        }
-
-
-        .secondary-button {
-
-            color: white;
-
-            background:
-                rgba(0,0,0,0.38);
-
-            border:
-                1px solid
-                rgba(255,255,255,0.16);
-
-            backdrop-filter:
-                blur(8px);
-        }
-
-
-        .secondary-button:hover {
-
-            border-color:
-                rgba(255,255,255,0.35);
-
-            transform:
-                translateY(-3px);
-        }
-
-
-        /* =====================================================
-           INFORMACIÓN HERO
-        ===================================================== */
-
-        .hero-info {
-
-            display: flex;
-
-            gap: 38px;
-
-            margin-top: 50px;
-
-            padding-top: 25px;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,0.10);
-
-            max-width: 620px;
-        }
-
-
-        .info-item {
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 6px;
-        }
-
-
-        .info-item strong {
-
-            font-size: 15px;
-        }
-
-
-        .info-item span {
-
-            color: #8d8d94;
-
-            font-size: 12px;
-        }
-
-
-        /* =====================================================
-           SECCIONES
-        ===================================================== */
-
-        section {
-
-            padding:
-                120px 7%;
-        }
-
-
-        .section-title {
-
-            max-width: 750px;
-
-            margin-bottom: 55px;
-        }
-
-
-        .section-title small {
-
-            display: block;
-
-            color: #a982ff;
-
-            font-size: 11px;
-
-            font-weight: 900;
-
-            letter-spacing: 4px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 14px;
-        }
-
-
-        .section-title h2 {
-
-            font-size:
-                clamp(38px, 5vw, 62px);
-
-            letter-spacing:
-                -2px;
-
-            margin-bottom: 15px;
-        }
-
-
-        .section-title p {
-
-            color: #8f9096;
-
-            line-height: 1.7;
-
-            font-size: 15px;
-        }
-
-
-        /* =====================================================
-           SERVIDOR
-        ===================================================== */
-
-        .server-section {
-
-            background:
-                linear-gradient(
-                    rgba(5,7,8,0.65),
-                    rgba(5,7,8,0.88)
-                );
-        }
-
-
-        .server-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                1.4fr 0.8fr;
-
-            gap: 20px;
-
-            max-width: 1150px;
-        }
-
-
-        .server-card {
-
-            padding: 38px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.10);
-
-            border-radius: 15px;
-
-            background:
-                rgba(11,14,16,0.75);
-
-            backdrop-filter:
-                blur(14px);
-        }
-
-
-        .server-card h3 {
-
-            font-size: 20px;
-
-            margin-bottom: 13px;
-        }
-
-
-        .server-card p {
-
-            color: #85868d;
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-
-        .server-ip {
-
-            font-size: 25px;
-
-            font-weight: 900;
-
-            margin:
-                24px 0 8px;
-
-            color: white;
-        }
-
-
-        .server-ip span {
-
-            color: #a982ff;
-        }
-
-
-        .status {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 8px;
-
-            color: #7d7f86;
-
-            font-size: 12px;
-        }
-
-
-        /* =====================================================
-           RANGOS
-        ===================================================== */
-
-        .ranks-section {
-
-            background:
-                rgba(5,7,8,0.88);
-        }
-
-
-        .ranks {
-
-            max-width: 1150px;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .rank {
-
-            min-height: 290px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-
-            padding: 28px 24px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.10);
-
-            border-radius: 14px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(19,22,25,0.92),
-                    rgba(9,11,13,0.92)
-                );
-
-            backdrop-filter:
-                blur(10px);
-
-            transition:
-                transform 0.25s,
-                border-color 0.25s,
-                box-shadow 0.25s;
-        }
-
-
-        .rank:hover {
-
-            transform:
-                translateY(-6px);
-
-            border-color:
-                currentColor;
-
-            box-shadow:
-                0 20px 45px
-                rgba(0,0,0,0.35);
-        }
-
-
-        .rank-name {
-
-            font-size: 22px;
-
-            font-weight: 950;
-
-            letter-spacing: 0.5px;
-
-            margin-bottom: 12px;
-        }
-
-
-        .rank-description {
-
-            color: #777a81;
-
-            font-size: 13px;
-
-            line-height: 1.65;
-        }
-
-
-        .rank-price {
-
-            font-size: 26px;
-
-            font-weight: 950;
-
-            margin:
-                22px 0 13px;
-        }
-
-
-        .rank-buy {
-
-            display: block;
-
-            width: 100%;
-
-            padding: 10px;
-
-            text-align: center;
-
-            border:
-                1px solid
-                currentColor;
-
-            border-radius: 7px;
-
-            color: inherit;
-
-            text-decoration: none;
-
-            font-size: 11px;
-
-            font-weight: 900;
-
-            text-transform: uppercase;
-
-            transition: 0.2s;
-        }
-
-
-        .rank-buy:hover {
-
-            background:
-                currentColor;
-
-            color: #08090a;
-        }
-
 
         /* COLORES */
 
         .origin {
-            color: #ffffff;
+            --rank-color: #b78cff;
         }
 
         .elite {
-            color: #4d8dff;
+            --rank-color: #3d8cff;
         }
 
         .celestial {
-            color: #2bd7f5;
+            --rank-color: #28d7e8;
         }
 
         .majestad {
-            color: #ffd34d;
+            --rank-color: #ffc83d;
         }
 
         .guardian {
-            color: #42dc82;
+            --rank-color: #35d978;
         }
 
         .semidios {
-            color: #d75aff;
+            --rank-color: #e34cff;
         }
 
         .dios {
-            color: #ff5363;
+            --rank-color: #ff3344;
         }
 
-        .soon {
-            color: #9b9da4;
-        }
-
-
-        /* =====================================================
+        /* =========================
            COMUNIDAD
-        ===================================================== */
+        ========================= */
 
         .community {
+            max-width: 950px;
 
-            max-width: 1150px;
+            margin: auto;
 
-            display: grid;
+            padding: 55px 35px;
 
-            grid-template-columns:
-                1.4fr 0.6fr;
-
-            gap: 30px;
-
-            padding: 55px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.10);
-
-            border-radius: 18px;
+            text-align: center;
 
             background:
-                linear-gradient(
-                    120deg,
-                    rgba(15,18,21,0.88),
-                    rgba(10,12,15,0.72)
-                );
+                radial-gradient(
+                    circle at center,
+                    rgba(139,92,246,0.11),
+                    transparent 65%
+                ),
+                #0d0e14;
 
-            backdrop-filter:
-                blur(15px);
+            border: 1px solid #252630;
+
+            border-radius: 18px;
         }
 
-
         .community h2 {
-
             font-size: 40px;
 
             margin-bottom: 15px;
         }
 
-
         .community p {
+            max-width: 600px;
 
-            color: #85868d;
+            margin: auto auto 30px;
+
+            color: #85858e;
 
             line-height: 1.7;
-
-            max-width: 650px;
         }
 
-
-        .community-button {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-        }
-
-
-        /* =====================================================
+        /* =========================
            FOOTER
-        ===================================================== */
+        ========================= */
 
         footer {
+            padding: 45px 7%;
 
-            padding:
-                45px 7%;
+            border-top: 1px solid #1d1e26;
 
-            border-top:
-                1px solid
-                rgba(255,255,255,0.08);
+            text-align: center;
 
-            background:
-                #050607;
+            color: #64646d;
 
-            color: #666970;
-
-            font-size: 12px;
+            font-size: 13px;
         }
-
 
         footer strong {
-
-            color: white;
+            color: #8b5cf6;
         }
 
-
-        /* =====================================================
+        /* =========================
            RESPONSIVE
-        ===================================================== */
+        ========================= */
 
         @media (max-width: 1000px) {
 
-            nav ul {
-                display: none;
+            .rank-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .ranks {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .server-grid,
-            .community {
-
-                grid-template-columns:
-                    1fr;
+            .features {
+                grid-template-columns: 1fr;
             }
 
         }
 
+        @media (max-width: 700px) {
 
-        @media (max-width: 600px) {
-
-            .hero {
-
-                padding:
-                    120px 6% 80px;
+            nav {
+                padding: 0 20px;
             }
 
-            .hero h1 {
-
-                font-size: 58px;
-
-                letter-spacing:
-                    -3px;
-            }
-
-            .hero-info {
-
-                gap: 20px;
-
-                flex-wrap: wrap;
-            }
-
-            .ranks {
-
-                grid-template-columns:
-                    1fr;
+            .nav-links {
+                display: none;
             }
 
             section {
+                padding: 80px 20px;
+            }
 
-                padding:
-                    85px 6%;
+            .hero h1 {
+                font-size: 50px;
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .rank-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .server-box {
+                padding: 30px 20px;
             }
 
             .community {
+                padding: 40px 20px;
+            }
 
-                padding:
-                    35px 25px;
+            .community h2 {
+                font-size: 32px;
             }
 
         }
@@ -1008,245 +691,141 @@
     </style>
 </head>
 
-
 <body>
 
-
-    <!-- =====================================================
-         FONDO
-    ===================================================== -->
-
-    <div class="minecraft-background"></div>
-
-    <div class="light-effect" id="light"></div>
-
-
-    <!-- =====================================================
-         NAVBAR
-    ===================================================== -->
+    <!-- =========================
+         NAVEGACIÓN
+    ========================= -->
 
     <nav>
 
-        <div class="logo">
+        <a href="#" class="logo">
             KAIZORA <span>ORIGINS</span>
-        </div>
-
-
-        <ul>
-
-            <li>
-                <a href="#inicio">
-                    Inicio
-                </a>
-            </li>
-
-            <li>
-                <a href="#servidor">
-                    Servidor
-                </a>
-            </li>
-
-            <li>
-                <a href="#rangos">
-                    Rangos
-                </a>
-            </li>
-
-            <li>
-                <a href="#comunidad">
-                    Comunidad
-                </a>
-            </li>
-
-        </ul>
-
-
-        <a
-            href="https://discord.gg/DkZKK2kXU"
-            target="_blank"
-            class="discord-button"
-        >
-            DISCORD
         </a>
+
+        <div class="nav-links">
+
+            <a href="#inicio">Inicio</a>
+            <a href="#caracteristicas">Características</a>
+            <a href="#servidor">Servidor</a>
+            <a href="#rangos">Rangos</a>
+            <a href="#comunidad">Comunidad</a>
+
+            <a
+                href="https://discord.gg/DkZKK2kXU"
+                target="_blank"
+                class="nav-button"
+            >
+                DISCORD
+            </a>
+
+        </div>
 
     </nav>
 
 
-    <!-- =====================================================
+    <!-- =========================
          HERO
-    ===================================================== -->
+    ========================= -->
 
-    <section
-        class="hero"
-        id="inicio"
-    >
+    <section class="hero" id="inicio">
 
-        <div class="hero-content">
+        <span class="hero-tag">
+            KAIZORA ORIGINS
+        </span>
 
+        <h1>
+            Un nuevo mundo<br>
+            <span>está esperando.</span>
+        </h1>
 
-            <div class="hero-label">
+        <p>
+            Explora, construye, conquista y escribe tu propia historia
+            dentro de Kaizora Origins.
+        </p>
 
-                <span class="online-dot"></span>
+        <div class="hero-buttons">
 
-                SERVIDOR MINECRAFT
+            <a href="#servidor" class="button-primary">
+                JUGAR AHORA
+            </a>
 
-            </div>
-
-
-            <h1>
-
-                KAIZORA
-                <span>ORIGINS</span>
-
-            </h1>
-
-
-            <p class="hero-description">
-
-                Un mundo donde cada jugador escribe su propia historia.
-                Construye tu hogar, forma alianzas, conquista territorios
-                y crea un legado que permanecerá en Kaizora Origins.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#servidor"
-                    class="button primary-button"
-                >
-                    JUGAR AHORA
-                </a>
-
-
-                <a
-                    href="https://discord.gg/DkZKK2kXU"
-                    target="_blank"
-                    class="button secondary-button"
-                >
-                    UNIRME A DISCORD
-                </a>
-
-            </div>
-
-
-            <div class="hero-info">
-
-                <div class="info-item">
-
-                    <strong>
-                        SURVIVAL
-                    </strong>
-
-                    <span>
-                        Modo de juego
-                    </span>
-
-                </div>
-
-
-                <div class="info-item">
-
-                    <strong>
-                        JAVA
-                    </strong>
-
-                    <span>
-                        Edición
-                    </span>
-
-                </div>
-
-
-                <div class="info-item">
-
-                    <strong>
-                        PRÓXIMAMENTE
-                    </strong>
-
-                    <span>
-                        Apertura
-                    </span>
-
-                </div>
-
-            </div>
+            <a
+                href="https://discord.gg/DkZKK2kXU"
+                target="_blank"
+                class="button-secondary"
+            >
+                NUESTRA COMUNIDAD
+            </a>
 
         </div>
 
     </section>
 
 
-    <!-- =====================================================
-         SERVIDOR
-    ===================================================== -->
+    <!-- =========================
+         CARACTERÍSTICAS
+    ========================= -->
 
-    <section
-        class="server-section"
-        id="servidor"
-    >
+    <section id="caracteristicas">
 
-        <div class="section-title">
+        <div class="section-header">
 
-            <small>
-                EL SERVIDOR
-            </small>
+            <span class="section-tag">
+                KAIZORA
+            </span>
 
             <h2>
-                Tu aventura empieza aquí.
+                Más que un servidor.
             </h2>
 
             <p>
-                Kaizora Origins está diseñado para crear una experiencia
-                Survival donde construir, progresar y jugar con la comunidad
-                sea parte de una misma historia.
+                Un mundo creado para que cada jugador pueda construir
+                su propia historia.
             </p>
 
         </div>
 
 
-        <div class="server-grid">
+        <div class="features">
 
-
-            <div class="server-card">
+            <div class="feature">
 
                 <h3>
-                    Dirección del servidor
+                    Tu propia historia
                 </h3>
 
                 <p>
-                    La dirección será publicada cuando el servidor
-                    esté preparado para abrir sus puertas.
+                    Comienza desde cero, construye tu imperio y decide
+                    hasta dónde quieres llegar.
                 </p>
-
-
-                <div class="server-ip">
-                    <span>PRÓXIMAMENTE</span>
-                </div>
-
-
-                <div class="status">
-
-                    <span class="online-dot"></span>
-
-                    Apertura próximamente
-
-                </div>
 
             </div>
 
 
-            <div class="server-card">
+            <div class="feature">
 
                 <h3>
-                    ¿Qué encontrarás?
+                    Una comunidad
                 </h3>
 
                 <p>
-                    Survival, economía, progresión de rangos,
-                    eventos, comunidad y muchas más características
-                    que iremos construyendo juntos.
+                    Forma parte de una comunidad activa y comparte
+                    tus aventuras con otros jugadores.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    Progresión
+                </h3>
+
+                <p>
+                    Avanza, consigue recursos, desbloquea nuevas
+                    posibilidades y demuestra de qué eres capaz.
                 </p>
 
             </div>
@@ -1256,363 +835,270 @@
     </section>
 
 
-    <!-- =====================================================
+    <!-- =========================
+         SERVIDOR
+    ========================= -->
+
+    <section id="servidor">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                SERVIDOR
+            </span>
+
+            <h2>
+                Entra a Kaizora.
+            </h2>
+
+            <p>
+                Tu aventura comienza cuando entras al servidor.
+            </p>
+
+        </div>
+
+
+        <div class="server-box">
+
+            <div class="server-status">
+
+                <span class="status-dot"></span>
+
+                Servidor próximamente
+
+            </div>
+
+
+            <h3>
+                Kaizora Origins
+            </h3>
+
+
+            <p>
+                Estamos preparando todo para recibirte.
+            </p>
+
+
+            <div class="ip-box">
+                IP: Próximamente
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
          RANGOS
-    ===================================================== -->
+    ========================= -->
 
-    <section
-        class="ranks-section"
-        id="rangos"
-    >
+    <section id="rangos">
 
-        <div class="section-title">
+        <div class="section-header">
 
-            <small>
-                TIENDA
-            </small>
+            <span class="section-tag">
+                RANGOS
+            </span>
 
             <h2>
                 Elige tu rango.
             </h2>
 
             <p>
-                Sube de categoría y desbloquea nuevas ventajas
-                dentro de Kaizora Origins.
+                Asciende en Kaizora Origins y desbloquea nuevas
+                ventajas dentro del servidor.
             </p>
 
         </div>
 
 
-        <div class="ranks">
+        <div class="rank-grid">
 
 
-            <!-- 1 -->
+            <!-- ORIGIN -->
 
-            <div class="rank origin">
+            <div class="rank-card origin">
 
-                <div>
-
-                    <div class="rank-name">
-                        ORIGIN
-                    </div>
-
-                    <div class="rank-description">
-                        El comienzo de tu camino.
-                        Da tus primeros pasos y empieza
-                        a destacar en Kaizora.
-                    </div>
-
+                <div class="rank-name">
+                    ORIGIN
                 </div>
 
-                <div>
+                <h3>
+                    ORIGIN
+                </h3>
 
-                    <div class="rank-price">
-                        $2.99
-                    </div>
+                <p>
+                    El primer paso para comenzar a destacar.
+                </p>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
-                        Comprar
-                    </a>
-
+                <div class="rank-price">
+                    $1.99
                 </div>
+
+                <a href="#" class="rank-button">
+                    COMPRAR
+                </a>
 
             </div>
 
 
-            <!-- 2 -->
+            <!-- ELITE -->
 
-            <div class="rank elite">
+            <div class="rank-card elite">
 
-                <div>
-
-                    <div class="rank-name">
-                        ELITE
-                    </div>
-
-                    <div class="rank-description">
-                        Para jugadores que buscan
-                        una experiencia superior
-                        dentro del servidor.
-                    </div>
-
+                <div class="rank-name">
+                    ELITE
                 </div>
 
-                <div>
+                <h3>
+                    ELITE
+                </h3>
 
-                    <div class="rank-price">
-                        $5.99
-                    </div>
+                <p>
+                    Un rango para quienes buscan ir un paso más allá.
+                </p>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
-                        Comprar
-                    </a>
-
+                <div class="rank-price">
+                    $4.99
                 </div>
+
+                <a href="#" class="rank-button">
+                    COMPRAR
+                </a>
 
             </div>
 
 
-            <!-- 3 -->
+            <!-- CELESTIAL -->
 
-            <div class="rank celestial">
+            <div class="rank-card celestial">
 
-                <div>
-
-                    <div class="rank-name">
-                        CELESTIAL
-                    </div>
-
-                    <div class="rank-description">
-                        Un rango para quienes comienzan
-                        a destacar entre los jugadores.
-                    </div>
-
+                <div class="rank-name">
+                    CELESTIAL
                 </div>
 
-                <div>
+                <h3>
+                    CELESTIAL
+                </h3>
 
-                    <div class="rank-price">
-                        $8.99
-                    </div>
+                <p>
+                    Un rango reservado para jugadores destacados.
+                </p>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
-                        Comprar
-                    </a>
-
+                <div class="rank-price">
+                    $6.99
                 </div>
+
+                <a href="#" class="rank-button">
+                    COMPRAR
+                </a>
 
             </div>
 
 
-            <!-- 4 -->
+            <!-- MAJESTAD -->
 
-            <div class="rank majestad">
+            <div class="rank-card majestad">
 
-                <div>
-
-                    <div class="rank-name">
-                        MAJESTAD
-                    </div>
-
-                    <div class="rank-description">
-                        Prestigio, reconocimiento y
-                        nuevas ventajas dentro de Kaizora.
-                    </div>
-
+                <div class="rank-name">
+                    MAJESTAD
                 </div>
 
-                <div>
+                <h3>
+                    MAJESTAD
+                </h3>
 
-                    <div class="rank-price">
-                        $11.99
-                    </div>
+                <p>
+                    Prestigio, reconocimiento y poder dentro de Kaizora.
+                </p>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
-                        Comprar
-                    </a>
-
+                <div class="rank-price">
+                    $8.99
                 </div>
+
+                <a href="#" class="rank-button">
+                    COMPRAR
+                </a>
 
             </div>
 
 
-            <!-- 5 -->
+            <!-- GUARDIAN -->
 
-            <div class="rank guardian">
+            <div class="rank-card guardian">
 
-                <div>
-
-                    <div class="rank-name">
-                        GUARDIAN
-                    </div>
-
-                    <div class="rank-description">
-                        Uno de los rangos superiores
-                        para jugadores comprometidos
-                        con Kaizora.
-                    </div>
-
+                <div class="rank-name">
+                    GUARDIAN
                 </div>
 
-                <div>
+                <h3>
+                    GUARDIAN
+                </h3>
 
-                    <div class="rank-price">
-                        $15.99
-                    </div>
+                <p>
+                    Uno de los rangos más poderosos de Kaizora.
+                </p>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
-                        Comprar
-                    </a>
-
+                <div class="rank-price">
+                    $10.99
                 </div>
+
+                <a href="#" class="rank-button">
+                    COMPRAR
+                </a>
 
             </div>
 
 
-            <!-- 6 -->
+            <!-- SEMIDIOS -->
 
-            <div class="rank semidios">
+            <div class="rank-card semidios">
 
-                <div>
-
-                    <div class="rank-name">
-                        SEMIDIOS
-                    </div>
-
-                    <div class="rank-description">
-                        Un nivel reservado para quienes
-                        han llevado su aventura mucho más lejos.
-                    </div>
-
+                <div class="rank-name">
+                    SEMIDIOS
                 </div>
 
-                <div>
+                <h3>
+                    SEMIDIOS
+                </h3>
 
-                    <div class="rank-price">
-                        $24.99
-                    </div>
+                <p>
+                    Poder reservado para quienes han alcanzado otro nivel.
+                </p>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
-                        Comprar
-                    </a>
-
+                <div class="rank-price">
+                    $14.99
                 </div>
+
+                <a href="#" class="rank-button">
+                    COMPRAR
+                </a>
 
             </div>
 
 
-            <!-- 7 -->
+            <!-- DIOS -->
 
-            <div class="rank dios">
+            <div class="rank-card dios">
 
-                <div>
-
-                    <div class="rank-name">
-                        DIOS
-                    </div>
-
-                    <div class="rank-description">
-                        El rango máximo de Kaizora Origins.
-                        El nivel definitivo.
-                    </div>
-
+                <div class="rank-name">
+                    DIOS
                 </div>
 
-                <div>
+                <h3>
+                    DIOS
+                </h3>
 
-                    <div class="rank-price">
-                        $34.99
-                    </div>
+                <p>
+                    El rango máximo de Kaizora Origins.
+                </p>
 
-                    <a
-                        href="#"
-                        class="rank-buy"
-                    >
-                        Comprar
-                    </a>
-
+                <div class="rank-price">
+                    $19.99
                 </div>
 
-            </div>
-
-
-            <!-- 8 -->
-
-            <div class="rank soon">
-
-                <div>
-
-                    <div class="rank-name">
-                        PRÓXIMAMENTE
-                    </div>
-
-                    <div class="rank-description">
-                        Un nuevo nivel está siendo
-                        preparado para Kaizora Origins.
-                    </div>
-
-                </div>
-
-                <div>
-
-                    <div class="rank-price">
-                        ---
-                    </div>
-
-                    <span class="rank-buy">
-                        Próximamente
-                    </span>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         COMUNIDAD
-    ===================================================== -->
-
-    <section id="comunidad">
-
-        <div class="community">
-
-
-            <div>
-
-                <div class="section-title"
-                     style="margin-bottom:0;">
-
-                    <small>
-                        COMUNIDAD
-                    </small>
-
-                    <h2>
-                        No construyas tu historia solo.
-                    </h2>
-
-                    <p>
-                        Únete al Discord oficial de Kaizora Origins
-                        para conocer jugadores, recibir novedades,
-                        participar en eventos y estar al tanto
-                        de la apertura del servidor.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="community-button">
-
-                <a
-                    href="https://discord.gg/DkZKK2kXU"
-                    target="_blank"
-                    class="button primary-button"
-                >
-                    UNIRME AL DISCORD
+                <a href="#" class="rank-button">
+                    COMPRAR
                 </a>
 
             </div>
@@ -1623,91 +1109,52 @@
     </section>
 
 
-    <!-- =====================================================
+    <!-- =========================
+         COMUNIDAD
+    ========================= -->
+
+    <section id="comunidad">
+
+        <div class="community">
+
+            <span class="section-tag">
+                COMUNIDAD
+            </span>
+
+            <h2>
+                Únete a Kaizora.
+            </h2>
+
+            <p>
+                Entra a nuestro Discord, conoce a otros jugadores,
+                recibe noticias del servidor y sé parte de la historia
+                desde el principio.
+            </p>
+
+            <a
+                href="https://discord.gg/DkZKK2kXU"
+                target="_blank"
+                class="button-primary"
+            >
+                UNIRME AL DISCORD
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
          FOOTER
-    ===================================================== -->
+    ========================= -->
 
     <footer>
 
-        <p>
-
-            © 2026
-            <strong>Kaizora Origins</strong>.
-
-            Todos los derechos reservados.
-
-        </p>
-
-        <p style="margin-top:9px;">
-
-            Servidor de Minecraft independiente.
-
-        </p>
+        © 2026 <strong>Kaizora Origins</strong>.
+        Todos los derechos reservados.
 
     </footer>
 
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ===================================================== -->
-
-    <script>
-
-
-        /* =================================================
-           PARALLAX DEL FONDO
-        ================================================= */
-
-        const background =
-            document.querySelector(
-                ".minecraft-background"
-            );
-
-
-        const light =
-            document.getElementById(
-                "light"
-            );
-
-
-        document.addEventListener(
-            "mousemove",
-            function(event) {
-
-                const x =
-                    event.clientX /
-                    window.innerWidth;
-
-                const y =
-                    event.clientY /
-                    window.innerHeight;
-
-
-                const moveX =
-                    (x - 0.5) * 18;
-
-
-                const moveY =
-                    (y - 0.5) * 12;
-
-
-                background.style.transform =
-                    `scale(1.04)
-                     translate(${moveX}px, ${moveY}px)`;
-
-
-                light.style.left =
-                    event.clientX + "px";
-
-
-                light.style.top =
-                    event.clientY + "px";
-
-            }
-        );
-
-
-    </script>
 
 </body>
 </html>
