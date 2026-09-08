@@ -40,7 +40,9 @@
         .minecraft-background {
 
             position: fixed;
+
             inset: 0;
+
             z-index: -10;
 
             background:
@@ -72,7 +74,9 @@
                 );
 
             background-size: 140% 140%;
+
             background-position: center;
+
             background-repeat: no-repeat;
 
             transform: scale(1.04);
@@ -85,7 +89,9 @@
         .minecraft-background::after {
 
             content: "";
+
             position: absolute;
+
             inset: 0;
 
             background:
@@ -95,6 +101,7 @@
                     rgba(0,0,0,0.35) 75%,
                     rgba(0,0,0,0.75) 100%
                 );
+
         }
 
 
@@ -107,6 +114,7 @@
             position: fixed;
 
             width: 550px;
+
             height: 550px;
 
             border-radius: 50%;
@@ -140,9 +148,11 @@
             position: fixed;
 
             top: 0;
+
             left: 0;
 
             width: 100%;
+
             height: 78px;
 
             display: flex;
@@ -172,12 +182,15 @@
         .logo {
 
             font-size: 22px;
+
             font-weight: 900;
+
             letter-spacing: 1px;
         }
 
 
         .logo span {
+
             color: #b49cff;
         }
 
@@ -193,6 +206,7 @@
             list-style: none;
 
             margin-left: auto;
+
             margin-right: 28px;
         }
 
@@ -204,6 +218,7 @@
             text-decoration: none;
 
             font-size: 14px;
+
             font-weight: 700;
 
             transition: 0.25s;
@@ -211,6 +226,7 @@
 
 
         nav ul a:hover {
+
             color: white;
         }
 
@@ -220,6 +236,7 @@
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             padding:
@@ -235,6 +252,7 @@
             text-decoration: none;
 
             font-size: 13px;
+
             font-weight: 900;
 
             box-shadow:
@@ -274,7 +292,9 @@
 
 
         .hero-content {
+
             max-width: 720px;
+
             text-align: left;
         }
 
@@ -306,6 +326,7 @@
             color: #d0d0d3;
 
             font-size: 11px;
+
             font-weight: 900;
 
             letter-spacing: 2px;
@@ -317,6 +338,7 @@
         .online-dot {
 
             width: 7px;
+
             height: 7px;
 
             border-radius: 50%;
@@ -351,6 +373,7 @@
 
 
         .hero h1 span {
+
             color: #a982ff;
         }
 
@@ -388,6 +411,7 @@
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             padding:
@@ -398,6 +422,7 @@
             text-decoration: none;
 
             font-size: 13px;
+
             font-weight: 900;
 
             transition: 0.25s;
@@ -486,6 +511,7 @@
 
 
         .info-item strong {
+
             font-size: 15px;
         }
 
@@ -524,6 +550,7 @@
             color: #a982ff;
 
             font-size: 11px;
+
             font-weight: 900;
 
             letter-spacing: 4px;
@@ -633,6 +660,7 @@
 
 
         .server-ip span {
+
             color: #a982ff;
         }
 
@@ -659,6 +687,62 @@
 
             background:
                 rgba(5,7,8,0.88);
+        }
+
+
+        /* AVISO DE COMPRA */
+
+        .purchase-notice {
+
+            max-width: 1150px;
+
+            margin-bottom: 35px;
+
+            padding: 22px 25px;
+
+            border:
+                1px solid
+                rgba(169,130,255,0.22);
+
+            border-left:
+                3px solid
+                #a982ff;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(169,130,255,0.08),
+                    rgba(255,255,255,0.025)
+                );
+
+            backdrop-filter:
+                blur(10px);
+        }
+
+
+        .purchase-notice strong {
+
+            display: block;
+
+            color: #c9b8ff;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            margin-bottom: 7px;
+        }
+
+
+        .purchase-notice p {
+
+            color: #8d8f96;
+
+            font-size: 13px;
+
+            line-height: 1.7;
         }
 
 
@@ -1066,6 +1150,7 @@
 
 
         footer strong {
+
             color: white;
         }
 
@@ -1419,6 +1504,26 @@
             <p>
                 Sube de categoría y desbloquea nuevas ventajas
                 dentro de Kaizora Origins.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             AVISO DE COMPRA
+        ================================================= -->
+
+        <div class="purchase-notice">
+
+            <strong>
+                ¿Ya realizaste tu compra?
+            </strong>
+
+            <p>
+                Una vez completado el pago, toma una captura de pantalla
+                de tu comprobante y abre un ticket en nuestro Discord oficial.
+                Nuestro equipo verificará tu compra y te otorgará el rango
+                correspondiente en el menor tiempo posible.
             </p>
 
         </div>
@@ -1897,10 +2002,8 @@
 
             <div>
 
-                <div
-                    class="section-title"
-                    style="margin-bottom:0;"
-                >
+                <div class="section-title"
+                     style="margin-bottom:0;">
 
                     <small>
                         COMUNIDAD
