@@ -36,15 +36,13 @@
 
 
         /* =====================================================
-           FONDO NEGRO + MORADO
+           FONDO
         ===================================================== */
 
         .minecraft-background {
 
             position: fixed;
-
             inset: 0;
-
             z-index: -10;
 
             background:
@@ -76,9 +74,7 @@
                 );
 
             background-size: 140% 140%;
-
             background-position: center;
-
             background-repeat: no-repeat;
 
             transform: scale(1.04);
@@ -93,7 +89,6 @@
             content: "";
 
             position: absolute;
-
             inset: 0;
 
             background:
@@ -103,12 +98,11 @@
                     rgba(0,0,0,0.35) 75%,
                     rgba(0,0,0,0.75) 100%
                 );
-
         }
 
 
         /* =====================================================
-           EFECTO DE LUZ
+           LUZ
         ===================================================== */
 
         .light-effect {
@@ -116,7 +110,6 @@
             position: fixed;
 
             width: 550px;
-
             height: 550px;
 
             border-radius: 50%;
@@ -150,17 +143,14 @@
             position: fixed;
 
             top: 0;
-
             left: 0;
 
             width: 100%;
-
             height: 78px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: space-between;
 
             padding:
@@ -175,7 +165,8 @@
             backdrop-filter: blur(12px);
 
             border-bottom:
-                1px solid rgba(255,255,255,0.08);
+                1px solid
+                rgba(255,255,255,0.08);
 
             z-index: 100;
         }
@@ -184,7 +175,6 @@
         .logo {
 
             font-size: 22px;
-
             font-weight: 900;
 
             letter-spacing: 1px;
@@ -192,7 +182,6 @@
 
 
         .logo span {
-
             color: #b49cff;
         }
 
@@ -208,7 +197,6 @@
             list-style: none;
 
             margin-left: auto;
-
             margin-right: 28px;
         }
 
@@ -220,7 +208,6 @@
             text-decoration: none;
 
             font-size: 14px;
-
             font-weight: 700;
 
             transition: 0.25s;
@@ -228,7 +215,6 @@
 
 
         nav ul a:hover {
-
             color: white;
         }
 
@@ -238,7 +224,6 @@
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             padding:
@@ -254,7 +239,6 @@
             text-decoration: none;
 
             font-size: 13px;
-
             font-weight: 900;
 
             box-shadow:
@@ -294,9 +278,7 @@
 
 
         .hero-content {
-
             max-width: 720px;
-
             text-align: left;
         }
 
@@ -328,7 +310,6 @@
             color: #d0d0d3;
 
             font-size: 11px;
-
             font-weight: 900;
 
             letter-spacing: 2px;
@@ -340,7 +321,6 @@
         .online-dot {
 
             width: 7px;
-
             height: 7px;
 
             border-radius: 50%;
@@ -375,7 +355,6 @@
 
 
         .hero h1 span {
-
             color: #a982ff;
         }
 
@@ -413,7 +392,6 @@
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             padding:
@@ -424,7 +402,6 @@
             text-decoration: none;
 
             font-size: 13px;
-
             font-weight: 900;
 
             transition: 0.25s;
@@ -513,7 +490,6 @@
 
 
         .info-item strong {
-
             font-size: 15px;
         }
 
@@ -552,7 +528,6 @@
             color: #a982ff;
 
             font-size: 11px;
-
             font-weight: 900;
 
             letter-spacing: 4px;
@@ -587,6 +562,7 @@
 
         /* =====================================================
            SERVIDOR
+           INFORMACIÓN VISUAL PREPARADA
         ===================================================== */
 
         .server-section {
@@ -641,10 +617,10 @@
                 translateY(-4px);
 
             border-color:
-                rgba(169,130,255,0.35);
+                rgba(169,130,255,0.30);
 
             box-shadow:
-                0 18px 40px
+                0 18px 45px
                 rgba(0,0,0,0.25);
         }
 
@@ -667,24 +643,70 @@
         }
 
 
+        /* IP */
+
         .server-ip {
 
-            font-size: 25px;
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin:
+                24px 0 14px;
+
+            padding:
+                16px 18px;
+
+            border:
+                1px solid
+                rgba(169,130,255,0.18);
+
+            border-radius: 9px;
+
+            background:
+                rgba(147,101,255,0.045);
+
+            font-size: 18px;
 
             font-weight: 900;
 
-            margin:
-                24px 0 8px;
-
-            color: white;
+            letter-spacing: 0.5px;
         }
 
 
         .server-ip span {
-
             color: #a982ff;
         }
 
+
+        .server-copy {
+
+            padding:
+                9px 13px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            border-radius: 6px;
+
+            background:
+                rgba(255,255,255,0.03);
+
+            color: #999ba2;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+        }
+
+
+        /* ESTADO */
 
         .status {
 
@@ -697,6 +719,145 @@
             color: #7d7f86;
 
             font-size: 12px;
+        }
+
+
+        /* INFORMACIÓN VISUAL */
+
+        .server-features {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+
+        .server-feature {
+
+            padding:
+                17px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            border-radius: 9px;
+
+            background:
+                rgba(255,255,255,0.025);
+        }
+
+
+        .server-feature strong {
+
+            display: block;
+
+            color: #d8d8dc;
+
+            font-size: 13px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .server-feature span {
+
+            color: #73757c;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+        }
+
+
+        /* PANEL DE INFORMACIÓN */
+
+        .server-status-panel {
+
+            margin-top: 20px;
+
+            padding:
+                20px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            border-radius: 10px;
+
+            background:
+                rgba(0,0,0,0.18);
+        }
+
+
+        .server-status-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 14px;
+        }
+
+
+        .server-status-header strong {
+            font-size: 13px;
+        }
+
+
+        .server-status-badge {
+
+            padding:
+                5px 8px;
+
+            border-radius: 5px;
+
+            background:
+                rgba(255,255,255,0.05);
+
+            color: #8f9096;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+        }
+
+
+        .server-status-line {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding:
+                9px 0;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.05);
+
+            color: #777980;
+
+            font-size: 11px;
+        }
+
+
+        .server-status-line:last-child {
+            border-bottom: none;
+        }
+
+
+        .server-status-line strong {
+            color: #bfc0c5;
         }
 
 
@@ -717,7 +878,8 @@
 
             margin-bottom: 30px;
 
-            padding: 18px 22px;
+            padding:
+                18px 22px;
 
             border:
                 1px solid
@@ -737,7 +899,6 @@
 
 
         .rank-notice strong {
-
             color: #c4afff;
         }
 
@@ -765,7 +926,8 @@
 
             justify-content: space-between;
 
-            padding: 28px 24px;
+            padding:
+                28px 24px;
 
             border:
                 1px solid
@@ -917,7 +1079,7 @@
 
 
         /* =====================================================
-           COLORES DE RANGOS
+           COLORES RANGOS
         ===================================================== */
 
         .origin {
@@ -954,7 +1116,7 @@
 
 
         /* =====================================================
-           REDES SOCIALES
+           REDES
         ===================================================== */
 
         .social-section {
@@ -981,7 +1143,8 @@
 
             min-height: 210px;
 
-            padding: 28px 24px;
+            padding:
+                28px 24px;
 
             display: flex;
 
@@ -1158,7 +1321,6 @@
             display: flex;
 
             align-items: center;
-
             justify-content: center;
         }
 
@@ -1186,7 +1348,6 @@
 
 
         footer strong {
-
             color: white;
         }
 
@@ -1214,7 +1375,6 @@
                 grid-template-columns:
                     1fr;
             }
-
         }
 
 
@@ -1226,6 +1386,7 @@
                     120px 6% 80px;
             }
 
+
             .hero h1 {
 
                 font-size: 58px;
@@ -1234,12 +1395,14 @@
                     -3px;
             }
 
+
             .hero-info {
 
                 gap: 20px;
 
                 flex-wrap: wrap;
             }
+
 
             .ranks,
             .social-grid {
@@ -1248,18 +1411,34 @@
                     1fr;
             }
 
+
+            .server-features {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .server-ip {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+
             section {
 
                 padding:
                     85px 6%;
             }
 
+
             .community {
 
                 padding:
                     35px 25px;
             }
-
         }
 
     </style>
@@ -1325,8 +1504,6 @@
         </ul>
 
 
-        <!-- DONACIONES -->
-
         <a
             href="https://www.paypal.com/invoice/p/#3YXT5YHUGCTP5VYK"
             target="_blank"
@@ -1382,7 +1559,7 @@
                     href="#servidor"
                     class="button primary-button"
                 >
-                    CONOCER EL SERVIDOR
+                    JUGAR AHORA
                 </a>
 
 
@@ -1432,7 +1609,7 @@
                     </strong>
 
                     <span>
-                        Servidor
+                        Estado
                     </span>
 
                 </div>
@@ -1446,6 +1623,8 @@
 
     <!-- =====================================================
          SERVIDOR
+         INFORMACIÓN PREPARADA
+         SIN COMANDOS NI API
     ===================================================== -->
 
     <section
@@ -1475,7 +1654,7 @@
         <div class="server-grid">
 
 
-            <!-- INFORMACIÓN DEL SERVIDOR -->
+            <!-- INFORMACIÓN PRINCIPAL -->
 
             <div class="server-card">
 
@@ -1484,14 +1663,21 @@
                 </h3>
 
                 <p>
-                    Toda la información necesaria para entrar a Kaizora
-                    Origins estará disponible aquí cuando el servidor
-                    esté preparado.
+                    Todo lo necesario para comenzar tu aventura estará
+                    disponible aquí cuando Kaizora Origins esté preparado.
                 </p>
 
 
                 <div class="server-ip">
-                    <span>IP PRÓXIMAMENTE</span>
+
+                    <span>
+                        PRÓXIMAMENTE
+                    </span>
+
+                    <div class="server-copy">
+                        IP
+                    </div>
+
                 </div>
 
 
@@ -1499,29 +1685,184 @@
 
                     <span class="online-dot"></span>
 
-                    Servidor en preparación
+                    Información próximamente
+
+                </div>
+
+
+                <!-- DATOS VISUALES PREPARADOS -->
+
+                <div class="server-features">
+
+
+                    <div class="server-feature">
+
+                        <strong>
+                            SURVIVAL
+                        </strong>
+
+                        <span>
+                            Supervivencia y progresión.
+                        </span>
+
+                    </div>
+
+
+                    <div class="server-feature">
+
+                        <strong>
+                            JAVA + BEDROCK
+                        </strong>
+
+                        <span>
+                            Compatible con ambas ediciones.
+                        </span>
+
+                    </div>
+
+
+                    <div class="server-feature">
+
+                        <strong>
+                            ECONOMÍA
+                        </strong>
+
+                        <span>
+                            Sistema económico del servidor.
+                        </span>
+
+                    </div>
+
+
+                    <div class="server-feature">
+
+                        <strong>
+                            EVENTOS
+                        </strong>
+
+                        <span>
+                            Actividades especiales para la comunidad.
+                        </span>
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- CARACTERÍSTICAS -->
+            <!-- ESTADO VISUAL -->
 
             <div class="server-card">
 
                 <h3>
-                    ¿Qué encontrarás?
+                    Estado de Kaizora
                 </h3>
 
                 <p>
-                    Survival, economía, progresión de rangos,
-                    eventos, comunidad y muchas más características
-                    que iremos construyendo juntos.
+                    Esta sección queda preparada para mostrar información
+                    del servidor en el futuro, sin necesidad de modificar
+                    el diseño cuando llegue el momento.
                 </p>
 
-            </div>
 
+                <div class="server-status-panel">
+
+
+                    <div class="server-status-header">
+
+                        <strong>
+                            SERVIDOR
+                        </strong>
+
+                        <span class="server-status-badge">
+                            PRÓXIMAMENTE
+                        </span>
+
+                    </div>
+
+
+                    <div class="server-status-line">
+
+                        <span>
+                            Estado
+                        </span>
+
+                        <strong>
+                            Próximamente
+                        </strong>
+
+                    </div>
+
+
+                    <div class="server-status-line">
+
+                        <span>
+                            Jugadores
+                        </span>
+
+                        <strong>
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="server-status-line">
+
+                        <span>
+                            Versión
+                        </span>
+
+                        <strong>
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="server-status-line">
+
+                        <span>
+                            Dirección
+                        </span>
+
+                        <strong>
+                            Próximamente
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="server-status-panel"
+                    style="margin-top:15px;"
+                >
+
+                    <div class="server-status-header">
+
+                        <strong>
+                            COMUNIDAD
+                        </strong>
+
+                        <span class="server-status-badge">
+                            DISCORD
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Únete al Discord para recibir novedades,
+                        participar en la comunidad y enterarte de
+                        las próximas novedades de Kaizora Origins.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -1555,9 +1896,7 @@
         </div>
 
 
-        <!-- =================================================
-             AVISO DE COMPRA
-        ================================================= -->
+        <!-- AVISO -->
 
         <div class="rank-notice">
 
@@ -1576,9 +1915,7 @@
         <div class="ranks">
 
 
-            <!-- =================================================
-                 ORIGIN
-            ================================================= -->
+            <!-- ORIGIN -->
 
             <div class="rank origin">
 
@@ -1595,7 +1932,6 @@
                     </div>
 
                 </div>
-
 
                 <div>
 
@@ -1624,9 +1960,7 @@
             </div>
 
 
-            <!-- =================================================
-                 ELITE
-            ================================================= -->
+            <!-- ELITE -->
 
             <div class="rank elite">
 
@@ -1643,7 +1977,6 @@
                     </div>
 
                 </div>
-
 
                 <div>
 
@@ -1672,9 +2005,7 @@
             </div>
 
 
-            <!-- =================================================
-                 CELESTIAL
-            ================================================= -->
+            <!-- CELESTIAL -->
 
             <div class="rank celestial">
 
@@ -1690,7 +2021,6 @@
                     </div>
 
                 </div>
-
 
                 <div>
 
@@ -1719,9 +2049,7 @@
             </div>
 
 
-            <!-- =================================================
-                 MAJESTAD
-            ================================================= -->
+            <!-- MAJESTAD -->
 
             <div class="rank majestad">
 
@@ -1737,7 +2065,6 @@
                     </div>
 
                 </div>
-
 
                 <div>
 
@@ -1766,9 +2093,7 @@
             </div>
 
 
-            <!-- =================================================
-                 GUARDIAN
-            ================================================= -->
+            <!-- GUARDIAN -->
 
             <div class="rank guardian">
 
@@ -1785,7 +2110,6 @@
                     </div>
 
                 </div>
-
 
                 <div>
 
@@ -1814,9 +2138,7 @@
             </div>
 
 
-            <!-- =================================================
-                 SEMIDIOS
-            ================================================= -->
+            <!-- SEMIDIOS -->
 
             <div class="rank semidios">
 
@@ -1832,7 +2154,6 @@
                     </div>
 
                 </div>
-
 
                 <div>
 
@@ -1861,9 +2182,7 @@
             </div>
 
 
-            <!-- =================================================
-                 DIOS
-            ================================================= -->
+            <!-- DIOS -->
 
             <div class="rank dios">
 
@@ -1879,7 +2198,6 @@
                     </div>
 
                 </div>
-
 
                 <div>
 
@@ -1908,9 +2226,7 @@
             </div>
 
 
-            <!-- =================================================
-                 PRÓXIMAMENTE
-            ================================================= -->
+            <!-- PRÓXIMAMENTE -->
 
             <div class="rank soon">
 
@@ -1926,7 +2242,6 @@
                     </div>
 
                 </div>
-
 
                 <div>
 
@@ -1949,7 +2264,7 @@
 
 
     <!-- =====================================================
-         REDES SOCIALES
+         REDES
     ===================================================== -->
 
     <section
@@ -1978,9 +2293,7 @@
         <div class="social-grid">
 
 
-            <!-- =================================================
-                 YOUTUBE
-            ================================================= -->
+            <!-- YOUTUBE -->
 
             <div class="social-card">
 
@@ -2013,9 +2326,7 @@
             </div>
 
 
-            <!-- =================================================
-                 KICK
-            ================================================= -->
+            <!-- KICK -->
 
             <div class="social-card">
 
@@ -2048,9 +2359,7 @@
             </div>
 
 
-            <!-- =================================================
-                 TIKTOK
-            ================================================= -->
+            <!-- TIKTOK -->
 
             <div class="social-card">
 
@@ -2083,9 +2392,7 @@
             </div>
 
 
-            <!-- =================================================
-                 INSTAGRAM
-            ================================================= -->
+            <!-- INSTAGRAM -->
 
             <div class="social-card">
 
