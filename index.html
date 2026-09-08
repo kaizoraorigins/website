@@ -11,6 +11,10 @@
 
     <style>
 
+        /* =====================================================
+           RESET
+        ===================================================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -28,12 +32,21 @@
             overflow-x: hidden;
         }
 
+
+        /* =====================================================
+           FONDO NEGRO + MORADO
+        ===================================================== */
+
         .minecraft-background {
+
             position: fixed;
+
             inset: 0;
+
             z-index: -10;
 
             background:
+
                 radial-gradient(
                     circle at 72% 35%,
                     rgba(147, 101, 255, 0.28) 0%,
@@ -61,7 +74,9 @@
                 );
 
             background-size: 140% 140%;
+
             background-position: center;
+
             background-repeat: no-repeat;
 
             transform: scale(1.04);
@@ -70,9 +85,13 @@
                 transform 0.8s ease-out;
         }
 
+
         .minecraft-background::after {
+
             content: "";
+
             position: absolute;
+
             inset: 0;
 
             background:
@@ -82,14 +101,26 @@
                     rgba(0,0,0,0.35) 75%,
                     rgba(0,0,0,0.75) 100%
                 );
+
         }
 
+
+        /* =====================================================
+           EFECTO DE LUZ
+        ===================================================== */
+
         .light-effect {
+
             position: fixed;
+
             width: 550px;
+
             height: 550px;
+
             border-radius: 50%;
+
             pointer-events: none;
+
             z-index: -5;
 
             background:
@@ -107,18 +138,31 @@
                 top 0.25s ease-out;
         }
 
+
+        /* =====================================================
+           NAVEGACIÓN
+        ===================================================== */
+
         nav {
+
             position: fixed;
+
             top: 0;
+
             left: 0;
+
             width: 100%;
+
             height: 78px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
-            padding: 0 6%;
+            padding:
+                0 6%;
 
             background:
                 linear-gradient(
@@ -134,52 +178,91 @@
             z-index: 100;
         }
 
+
         .logo {
+
             font-size: 22px;
+
             font-weight: 900;
+
             letter-spacing: 1px;
         }
 
+
         .logo span {
+
             color: #b49cff;
         }
 
+
         nav ul {
+
             display: flex;
+
             align-items: center;
+
             gap: 34px;
+
             list-style: none;
+
             margin-left: auto;
+
             margin-right: 28px;
         }
 
+
         nav ul a {
+
             color: #c5c5c9;
+
             text-decoration: none;
+
             font-size: 14px;
+
             font-weight: 700;
+
             transition: 0.25s;
         }
 
+
         nav ul a:hover {
+
             color: white;
         }
 
-        .discord-button {
-            display: inline-flex;
+
+        .top-buttons {
+
+            display: flex;
+
             align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .discord-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
             justify-content: center;
 
-            padding: 11px 19px;
+            padding:
+                11px 19px;
+
             border-radius: 8px;
 
             background:
                 rgba(139,92,246,0.95);
 
             color: white !important;
+
             text-decoration: none;
 
             font-size: 13px;
+
             font-weight: 900;
 
             box-shadow:
@@ -189,35 +272,99 @@
             transition: 0.25s;
         }
 
+
         .discord-button:hover {
-            transform: translateY(-2px);
+
+            transform:
+                translateY(-2px);
 
             box-shadow:
                 0 12px 40px
                 rgba(139,92,246,0.35);
         }
 
+
+        .donation-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding:
+                11px 19px;
+
+            border-radius: 8px;
+
+            background:
+                rgba(255,255,255,0.07);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.14);
+
+            color: white !important;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 900;
+
+            transition: 0.25s;
+        }
+
+
+        .donation-button:hover {
+
+            transform:
+                translateY(-2px);
+
+            background:
+                rgba(255,255,255,0.12);
+
+            border-color:
+                rgba(255,255,255,0.28);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
         .hero {
+
             min-height: 100vh;
 
             display: flex;
+
             align-items: center;
 
             padding:
                 130px 8% 100px;
         }
 
+
         .hero-content {
+
             max-width: 720px;
+
             text-align: left;
         }
 
+
         .hero-label {
+
             display: inline-flex;
+
             align-items: center;
+
             gap: 9px;
 
-            padding: 8px 13px;
+            padding:
+                8px 13px;
+
             margin-bottom: 22px;
 
             border:
@@ -234,14 +381,21 @@
             color: #d0d0d3;
 
             font-size: 11px;
+
             font-weight: 900;
+
             letter-spacing: 2px;
+
             text-transform: uppercase;
         }
 
+
         .online-dot {
+
             width: 7px;
+
             height: 7px;
+
             border-radius: 50%;
 
             background: #48df8b;
@@ -251,12 +405,18 @@
                 rgba(72,223,139,0.8);
         }
 
+
         .hero h1 {
+
             font-size:
                 clamp(58px, 8vw, 108px);
 
-            line-height: 0.90;
-            letter-spacing: -5px;
+            line-height:
+                0.90;
+
+            letter-spacing:
+                -5px;
+
             font-weight: 950;
 
             margin-bottom: 28px;
@@ -266,16 +426,21 @@
                 rgba(0,0,0,0.65);
         }
 
+
         .hero h1 span {
+
             color: #a982ff;
         }
 
+
         .hero-description {
+
             max-width: 650px;
 
             color: #c4c4c8;
 
             font-size: 18px;
+
             line-height: 1.7;
 
             text-shadow:
@@ -283,32 +448,46 @@
                 rgba(0,0,0,0.8);
         }
 
+
         .hero-buttons {
+
             display: flex;
+
             gap: 13px;
+
             margin-top: 34px;
+
             flex-wrap: wrap;
         }
 
+
         .button {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
 
-            padding: 15px 23px;
+            padding:
+                15px 23px;
 
             border-radius: 8px;
 
             text-decoration: none;
 
             font-size: 13px;
+
             font-weight: 900;
 
             transition: 0.25s;
         }
 
+
         .primary-button {
+
             background: #9365ff;
+
             color: white;
 
             box-shadow:
@@ -316,15 +495,20 @@
                 rgba(147,101,255,0.25);
         }
 
+
         .primary-button:hover {
-            transform: translateY(-3px);
+
+            transform:
+                translateY(-3px);
 
             box-shadow:
                 0 18px 45px
                 rgba(147,101,255,0.4);
         }
 
+
         .secondary-button {
+
             color: white;
 
             background:
@@ -338,7 +522,9 @@
                 blur(8px);
         }
 
+
         .secondary-button:hover {
+
             border-color:
                 rgba(255,255,255,0.35);
 
@@ -346,11 +532,19 @@
                 translateY(-3px);
         }
 
+
+        /* =====================================================
+           INFORMACIÓN HERO
+        ===================================================== */
+
         .hero-info {
+
             display: flex;
+
             gap: 38px;
 
             margin-top: 50px;
+
             padding-top: 25px;
 
             border-top:
@@ -360,38 +554,60 @@
             max-width: 620px;
         }
 
+
         .info-item {
+
             display: flex;
+
             flex-direction: column;
+
             gap: 6px;
         }
 
+
         .info-item strong {
+
             font-size: 15px;
         }
 
+
         .info-item span {
+
             color: #8d8d94;
+
             font-size: 12px;
         }
 
+
+        /* =====================================================
+           SECCIONES
+        ===================================================== */
+
         section {
+
             padding:
                 120px 7%;
         }
 
+
         .section-title {
+
             max-width: 750px;
+
             margin-bottom: 55px;
         }
 
+
         .section-title small {
+
             display: block;
 
             color: #a982ff;
 
             font-size: 11px;
+
             font-weight: 900;
+
             letter-spacing: 4px;
 
             text-transform: uppercase;
@@ -399,22 +615,35 @@
             margin-bottom: 14px;
         }
 
+
         .section-title h2 {
+
             font-size:
                 clamp(38px, 5vw, 62px);
 
-            letter-spacing: -2px;
+            letter-spacing:
+                -2px;
 
             margin-bottom: 15px;
         }
 
+
         .section-title p {
+
             color: #8f9096;
+
             line-height: 1.7;
+
             font-size: 15px;
         }
 
+
+        /* =====================================================
+           SERVIDOR
+        ===================================================== */
+
         .server-section {
+
             background:
                 linear-gradient(
                     rgba(5,7,8,0.65),
@@ -422,7 +651,9 @@
                 );
         }
 
+
         .server-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -433,7 +664,9 @@
             max-width: 1150px;
         }
 
+
         .server-card {
+
             padding: 38px;
 
             border:
@@ -449,19 +682,29 @@
                 blur(14px);
         }
 
+
         .server-card h3 {
+
             font-size: 20px;
+
             margin-bottom: 13px;
         }
 
+
         .server-card p {
+
             color: #85868d;
+
             font-size: 14px;
+
             line-height: 1.7;
         }
 
+
         .server-ip {
+
             font-size: 25px;
+
             font-weight: 900;
 
             margin:
@@ -470,25 +713,73 @@
             color: white;
         }
 
+
         .server-ip span {
+
             color: #a982ff;
         }
 
+
         .status {
+
             display: inline-flex;
+
             align-items: center;
+
             gap: 8px;
 
             color: #7d7f86;
+
             font-size: 12px;
         }
 
+
+        /* =====================================================
+           RANGOS
+        ===================================================== */
+
         .ranks-section {
+
             background:
                 rgba(5,7,8,0.88);
         }
 
+
+        .discount-notice {
+
+            max-width: 1150px;
+
+            margin:
+                -25px 0 35px;
+
+            padding:
+                17px 22px;
+
+            border:
+                1px solid
+                rgba(169,130,255,0.25);
+
+            border-radius: 10px;
+
+            background:
+                rgba(169,130,255,0.06);
+
+            color: #bcbcc3;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        .discount-notice strong {
+
+            color: #b49cff;
+        }
+
+
         .ranks {
+
             max-width: 1150px;
 
             display: grid;
@@ -499,11 +790,15 @@
             gap: 18px;
         }
 
+
         .rank {
-            min-height: 290px;
+
+            min-height: 315px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: space-between;
 
             padding: 28px 24px;
@@ -530,7 +825,9 @@
                 box-shadow 0.25s;
         }
 
+
         .rank:hover {
+
             transform:
                 translateY(-6px);
 
@@ -542,29 +839,88 @@
                 rgba(0,0,0,0.35);
         }
 
+
         .rank-name {
+
             font-size: 22px;
+
             font-weight: 950;
+
             letter-spacing: 0.5px;
+
             margin-bottom: 12px;
         }
 
+
         .rank-description {
+
             color: #777a81;
+
             font-size: 13px;
+
             line-height: 1.65;
         }
 
-        .rank-price {
-            font-size: 26px;
-            font-weight: 950;
 
-            margin:
-                22px 0 13px;
+        .rank-price-area {
+
+            margin-top: 22px;
         }
 
+
+        .rank-old-price {
+
+            color: #696b72;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            text-decoration:
+                line-through;
+
+            margin-bottom: 4px;
+        }
+
+
+        .discount-label {
+
+            display: inline-block;
+
+            padding:
+                4px 7px;
+
+            margin-bottom: 7px;
+
+            border-radius: 5px;
+
+            background:
+                rgba(72,223,139,0.10);
+
+            color: #48df8b;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        .rank-price {
+
+            font-size: 26px;
+
+            font-weight: 950;
+
+            margin-bottom: 13px;
+        }
+
+
         .rank-buy {
+
             display: block;
+
             width: 100%;
 
             padding: 10px;
@@ -578,9 +934,11 @@
             border-radius: 7px;
 
             color: inherit;
+
             text-decoration: none;
 
             font-size: 11px;
+
             font-weight: 900;
 
             text-transform: uppercase;
@@ -588,12 +946,19 @@
             transition: 0.2s;
         }
 
+
         .rank-buy:hover {
+
             background:
                 currentColor;
 
             color: #08090a;
         }
+
+
+        /* =====================================================
+           COLORES DE RANGOS
+        ===================================================== */
 
         .origin {
             color: #ffffff;
@@ -627,12 +992,20 @@
             color: #9b9da4;
         }
 
+
+        /* =====================================================
+           REDES SOCIALES
+        ===================================================== */
+
         .social-section {
+
             background:
                 rgba(5,7,8,0.88);
         }
 
+
         .social-grid {
+
             max-width: 1150px;
 
             display: grid;
@@ -643,13 +1016,17 @@
             gap: 18px;
         }
 
+
         .social-card {
+
             min-height: 210px;
 
             padding: 28px 24px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: space-between;
 
             border:
@@ -674,7 +1051,9 @@
                 box-shadow 0.25s;
         }
 
+
         .social-card:hover {
+
             transform:
                 translateY(-6px);
 
@@ -686,27 +1065,43 @@
                 rgba(0,0,0,0.35);
         }
 
+
         .social-name {
+
             font-size: 21px;
+
             font-weight: 950;
+
             margin-bottom: 8px;
         }
 
+
         .social-username {
+
             color: #8b8d94;
+
             font-size: 13px;
+
             word-break: break-word;
         }
 
+
         .social-description {
+
             color: #6f7178;
+
             font-size: 12px;
+
             line-height: 1.6;
+
             margin-top: 14px;
         }
 
+
         .social-button {
+
             display: block;
+
             width: 100%;
 
             padding: 10px;
@@ -720,9 +1115,11 @@
             border-radius: 7px;
 
             color: #b49cff;
+
             text-decoration: none;
 
             font-size: 11px;
+
             font-weight: 900;
 
             text-transform: uppercase;
@@ -730,7 +1127,9 @@
             transition: 0.2s;
         }
 
+
         .social-button:hover {
+
             background:
                 #a982ff;
 
@@ -740,7 +1139,13 @@
                 #a982ff;
         }
 
+
+        /* =====================================================
+           COMUNIDAD
+        ===================================================== */
+
         .community {
+
             max-width: 1150px;
 
             display: grid;
@@ -769,24 +1174,41 @@
                 blur(15px);
         }
 
+
         .community h2 {
+
             font-size: 40px;
+
             margin-bottom: 15px;
         }
 
+
         .community p {
+
             color: #85868d;
+
             line-height: 1.7;
+
             max-width: 650px;
         }
 
+
         .community-button {
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
         }
 
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
         footer {
+
             padding:
                 45px 7%;
 
@@ -802,61 +1224,111 @@
             font-size: 12px;
         }
 
+
         footer strong {
+
             color: white;
         }
 
-        @media (max-width: 1000px) {
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1100px) {
 
             nav ul {
                 display: none;
             }
 
+            .top-buttons {
+                margin-left: auto;
+            }
+
             .ranks,
             .social-grid {
+
                 grid-template-columns:
                     repeat(2, 1fr);
             }
 
             .server-grid,
             .community {
+
                 grid-template-columns:
                     1fr;
             }
+
         }
+
 
         @media (max-width: 600px) {
 
+            nav {
+
+                padding:
+                    0 5%;
+            }
+
+            .logo {
+
+                font-size: 17px;
+            }
+
+            .top-buttons {
+
+                gap: 6px;
+            }
+
+            .discord-button,
+            .donation-button {
+
+                padding:
+                    9px 10px;
+
+                font-size: 9px;
+            }
+
             .hero {
+
                 padding:
                     120px 6% 80px;
             }
 
             .hero h1 {
+
                 font-size: 58px;
-                letter-spacing: -3px;
+
+                letter-spacing:
+                    -3px;
             }
 
             .hero-info {
+
                 gap: 20px;
+
                 flex-wrap: wrap;
             }
 
             .ranks,
             .social-grid {
+
                 grid-template-columns:
                     1fr;
             }
 
             section {
+
                 padding:
                     85px 6%;
             }
 
             .community {
+
                 padding:
                     35px 25px;
             }
+
         }
 
     </style>
@@ -866,14 +1338,18 @@
 <body>
 
 
-    <!-- FONDO -->
+    <!-- =====================================================
+         FONDO
+    ===================================================== -->
 
     <div class="minecraft-background"></div>
 
     <div class="light-effect" id="light"></div>
 
 
-    <!-- NAVBAR -->
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
 
     <nav>
 
@@ -917,21 +1393,32 @@
         </ul>
 
 
-        <!-- AHORA ES DONACIONES -->
+        <div class="top-buttons">
 
-        <a
-            href="https://www.paypal.com/invoice/p/#3YXT5YHUGCTP5VYK"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="discord-button"
-        >
-            DONACIONES
-        </a>
+            <a
+                href="#redes"
+                class="discord-button"
+            >
+                REDES
+            </a>
+
+
+            <a
+                href="https://www.paypal.com/invoice/p/#3YXT5YHUGCTP5VYK"
+                target="_blank"
+                class="donation-button"
+            >
+                DONACIONES
+            </a>
+
+        </div>
 
     </nav>
 
 
-    <!-- HERO -->
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
 
     <section
         class="hero"
@@ -939,6 +1426,7 @@
     >
 
         <div class="hero-content">
+
 
             <div class="hero-label">
 
@@ -979,7 +1467,6 @@
                 <a
                     href="https://discord.gg/DkZKK2kXU"
                     target="_blank"
-                    rel="noopener noreferrer"
                     class="button secondary-button"
                 >
                     UNIRME A DISCORD
@@ -1035,7 +1522,9 @@
     </section>
 
 
-    <!-- SERVIDOR -->
+    <!-- =====================================================
+         SERVIDOR
+    ===================================================== -->
 
     <section
         class="server-section"
@@ -1111,7 +1600,9 @@
     </section>
 
 
-    <!-- RANGOS -->
+    <!-- =====================================================
+         RANGOS
+    ===================================================== -->
 
     <section
         class="ranks-section"
@@ -1129,16 +1620,34 @@
             </h2>
 
             <p>
-                Una vez completes el pago, toma una captura de pantalla
-                y abre un ticket en el Discord oficial. Verificaremos
-                tu compra y te entregaremos el rango en unos momentos.
+                Sube de categoría y desbloquea nuevas ventajas
+                dentro de Kaizora Origins.
             </p>
+
+        </div>
+
+
+        <div class="discount-notice">
+
+            <strong>🔥 OFERTA ESPECIAL:</strong>
+
+            Todos los rangos disponibles cuentan actualmente
+            con un <strong>20% de descuento</strong>.
+
+            Una vez completes el pago, toma una captura de pantalla
+            de la confirmación y abre un ticket en nuestro Discord oficial.
+            Nuestro equipo verificará el pago y te entregará tu rango
+            lo antes posible.
 
         </div>
 
 
         <div class="ranks">
 
+
+            <!-- =================================================
+                 ORIGIN
+            ================================================= -->
 
             <div class="rank origin">
 
@@ -1156,7 +1665,15 @@
 
                 </div>
 
-                <div>
+                <div class="rank-price-area">
+
+                    <div class="discount-label">
+                        20% DE DESCUENTO
+                    </div>
+
+                    <div class="rank-old-price">
+                        $4.99
+                    </div>
 
                     <div class="rank-price">
                         $2.99
@@ -1165,7 +1682,6 @@
                     <a
                         href="https://www.paypal.com/invoice/p/#JUVJMSVVEHNNPD6M"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="rank-buy"
                     >
                         Comprar
@@ -1175,6 +1691,10 @@
 
             </div>
 
+
+            <!-- =================================================
+                 ELITE
+            ================================================= -->
 
             <div class="rank elite">
 
@@ -1192,7 +1712,15 @@
 
                 </div>
 
-                <div>
+                <div class="rank-price-area">
+
+                    <div class="discount-label">
+                        20% DE DESCUENTO
+                    </div>
+
+                    <div class="rank-old-price">
+                        $6.99
+                    </div>
 
                     <div class="rank-price">
                         $4.99
@@ -1201,7 +1729,6 @@
                     <a
                         href="https://www.paypal.com/invoice/p/#BQZMWEWCDUFNLUPN"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="rank-buy"
                     >
                         Comprar
@@ -1211,6 +1738,10 @@
 
             </div>
 
+
+            <!-- =================================================
+                 CELESTIAL
+            ================================================= -->
 
             <div class="rank celestial">
 
@@ -1227,7 +1758,15 @@
 
                 </div>
 
-                <div>
+                <div class="rank-price-area">
+
+                    <div class="discount-label">
+                        20% DE DESCUENTO
+                    </div>
+
+                    <div class="rank-old-price">
+                        $9.99
+                    </div>
 
                     <div class="rank-price">
                         $7.99
@@ -1236,7 +1775,6 @@
                     <a
                         href="https://www.paypal.com/invoice/p/#W7F9ZWMW86VEXQHJ"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="rank-buy"
                     >
                         Comprar
@@ -1246,6 +1784,10 @@
 
             </div>
 
+
+            <!-- =================================================
+                 MAJESTAD
+            ================================================= -->
 
             <div class="rank majestad">
 
@@ -1262,7 +1804,15 @@
 
                 </div>
 
-                <div>
+                <div class="rank-price-area">
+
+                    <div class="discount-label">
+                        20% DE DESCUENTO
+                    </div>
+
+                    <div class="rank-old-price">
+                        $13.99
+                    </div>
 
                     <div class="rank-price">
                         $11.99
@@ -1271,7 +1821,6 @@
                     <a
                         href="https://www.paypal.com/invoice/p/#BQK374XAZDU6RTXA"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="rank-buy"
                     >
                         Comprar
@@ -1281,6 +1830,10 @@
 
             </div>
 
+
+            <!-- =================================================
+                 GUARDIAN
+            ================================================= -->
 
             <div class="rank guardian">
 
@@ -1298,7 +1851,15 @@
 
                 </div>
 
-                <div>
+                <div class="rank-price-area">
+
+                    <div class="discount-label">
+                        20% DE DESCUENTO
+                    </div>
+
+                    <div class="rank-old-price">
+                        $17.99
+                    </div>
 
                     <div class="rank-price">
                         $15.99
@@ -1307,7 +1868,6 @@
                     <a
                         href="https://www.paypal.com/invoice/p/#JGX4ZQA5NKSEYVG3"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="rank-buy"
                     >
                         Comprar
@@ -1317,6 +1877,10 @@
 
             </div>
 
+
+            <!-- =================================================
+                 SEMIDIOS
+            ================================================= -->
 
             <div class="rank semidios">
 
@@ -1333,7 +1897,15 @@
 
                 </div>
 
-                <div>
+                <div class="rank-price-area">
+
+                    <div class="discount-label">
+                        20% DE DESCUENTO
+                    </div>
+
+                    <div class="rank-old-price">
+                        $26.99
+                    </div>
 
                     <div class="rank-price">
                         $24.99
@@ -1342,7 +1914,6 @@
                     <a
                         href="https://www.paypal.com/invoice/p/#B3L9RUEAVMG3U3CZ"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="rank-buy"
                     >
                         Comprar
@@ -1352,6 +1923,10 @@
 
             </div>
 
+
+            <!-- =================================================
+                 DIOS
+            ================================================= -->
 
             <div class="rank dios">
 
@@ -1368,7 +1943,15 @@
 
                 </div>
 
-                <div>
+                <div class="rank-price-area">
+
+                    <div class="discount-label">
+                        20% DE DESCUENTO
+                    </div>
+
+                    <div class="rank-old-price">
+                        $36.99
+                    </div>
 
                     <div class="rank-price">
                         $34.99
@@ -1377,7 +1960,6 @@
                     <a
                         href="https://www.paypal.com/invoice/p/#J9CWUBGCQ5MLVBDB"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="rank-buy"
                     >
                         Comprar
@@ -1387,6 +1969,10 @@
 
             </div>
 
+
+            <!-- =================================================
+                 PRÓXIMAMENTE
+            ================================================= -->
 
             <div class="rank soon">
 
@@ -1403,7 +1989,7 @@
 
                 </div>
 
-                <div>
+                <div class="rank-price-area">
 
                     <div class="rank-price">
                         ---
@@ -1423,7 +2009,9 @@
     </section>
 
 
-    <!-- REDES SOCIALES -->
+    <!-- =====================================================
+         REDES SOCIALES
+    ===================================================== -->
 
     <section
         class="social-section"
@@ -1451,6 +2039,8 @@
         <div class="social-grid">
 
 
+            <!-- YOUTUBE -->
+
             <div class="social-card">
 
                 <div>
@@ -1474,7 +2064,6 @@
                 <a
                     href="https://www.youtube.com/@YonoSoyAnthony"
                     target="_blank"
-                    rel="noopener noreferrer"
                     class="social-button"
                 >
                     Visitar canal
@@ -1482,6 +2071,8 @@
 
             </div>
 
+
+            <!-- KICK -->
 
             <div class="social-card">
 
@@ -1506,7 +2097,6 @@
                 <a
                     href="https://kick.com/yosoyanthonyyy"
                     target="_blank"
-                    rel="noopener noreferrer"
                     class="social-button"
                 >
                     Ver canal
@@ -1514,6 +2104,8 @@
 
             </div>
 
+
+            <!-- TIKTOK -->
 
             <div class="social-card">
 
@@ -1538,7 +2130,6 @@
                 <a
                     href="https://www.tiktok.com/@yosoyanthonyyy?lang=es-419"
                     target="_blank"
-                    rel="noopener noreferrer"
                     class="social-button"
                 >
                     Ver perfil
@@ -1546,6 +2137,8 @@
 
             </div>
 
+
+            <!-- INSTAGRAM -->
 
             <div class="social-card">
 
@@ -1570,7 +2163,6 @@
                 <a
                     href="https://www.instagram.com/yonosoyanthony/"
                     target="_blank"
-                    rel="noopener noreferrer"
                     class="social-button"
                 >
                     Ver perfil
@@ -1584,7 +2176,9 @@
     </section>
 
 
-    <!-- COMUNIDAD -->
+    <!-- =====================================================
+         COMUNIDAD
+    ===================================================== -->
 
     <section id="comunidad">
 
@@ -1623,7 +2217,6 @@
                 <a
                     href="https://discord.gg/DkZKK2kXU"
                     target="_blank"
-                    rel="noopener noreferrer"
                     class="button primary-button"
                 >
                     UNIRME AL DISCORD
@@ -1637,7 +2230,9 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
 
     <footer>
 
@@ -1659,7 +2254,9 @@
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
 
     <script>
 
