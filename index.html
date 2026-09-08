@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -179,56 +181,19 @@
         }
 
 
-        /* =====================================================
-           LOGO
-        ===================================================== */
-
         .logo {
 
-            display: flex;
+            font-size: 22px;
 
-            align-items: center;
+            font-weight: 900;
 
-            text-decoration: none;
-
-            height: 62px;
-
-            flex-shrink: 0;
+            letter-spacing: 1px;
         }
 
 
-        .logo img {
+        .logo span {
 
-            height: 62px;
-
-            width: auto;
-
-            display: block;
-
-            object-fit: contain;
-
-            filter:
-                drop-shadow(
-                    0 0 14px
-                    rgba(169,130,255,0.22)
-                );
-
-            transition:
-                transform 0.25s ease,
-                filter 0.25s ease;
-        }
-
-
-        .logo:hover img {
-
-            transform:
-                scale(1.05);
-
-            filter:
-                drop-shadow(
-                    0 0 22px
-                    rgba(169,130,255,0.42)
-                );
+            color: #b49cff;
         }
 
 
@@ -727,6 +692,37 @@
         }
 
 
+        .rank-notice {
+
+            max-width: 1150px;
+
+            margin-bottom: 30px;
+
+            padding: 18px 22px;
+
+            border:
+                1px solid
+                rgba(169,130,255,0.22);
+
+            border-radius: 10px;
+
+            background:
+                rgba(147,101,255,0.06);
+
+            color: #aaaab1;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        .rank-notice strong {
+
+            color: #c4afff;
+        }
+
+
         .ranks {
 
             max-width: 1150px;
@@ -819,6 +815,46 @@
 
             margin:
                 22px 0 13px;
+        }
+
+
+        .old-price {
+
+            display: block;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            color: #777a81;
+
+            text-decoration: line-through;
+
+            margin-bottom: 3px;
+        }
+
+
+        .discount {
+
+            display: inline-block;
+
+            padding:
+                4px 7px;
+
+            margin-bottom: 8px;
+
+            border-radius: 5px;
+
+            background:
+                rgba(72,223,139,0.10);
+
+            color: #48df8b;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.5px;
         }
 
 
@@ -1165,19 +1201,6 @@
 
         @media (max-width: 600px) {
 
-            nav {
-
-                padding:
-                    0 5%;
-            }
-
-
-            .logo img {
-
-                height: 54px;
-            }
-
-
             .hero {
 
                 padding:
@@ -1221,6 +1244,7 @@
         }
 
     </style>
+
 </head>
 
 
@@ -1242,19 +1266,9 @@
 
     <nav>
 
-        <!-- LOGO KAIZORA ORIGINS -->
-
-        <a
-            href="#inicio"
-            class="logo"
-        >
-
-            <img
-                src="kaizora-logo.png"
-                alt="Kaizora Origins"
-            >
-
-        </a>
+        <div class="logo">
+            KAIZORA <span>ORIGINS</span>
+        </div>
 
 
         <ul>
@@ -1283,14 +1297,22 @@
                 </a>
             </li>
 
+            <li>
+                <a href="#redes">
+                    Redes
+                </a>
+            </li>
+
         </ul>
 
 
+        <!-- SOLO DONACIONES -->
         <a
-            href="#redes"
+            href="https://www.paypal.com/invoice/p/#3YXT5YHUGCTP5VYK"
+            target="_blank"
             class="discord-button"
         >
-            REDES
+            DONACIONES
         </a>
 
     </nav>
@@ -1507,8 +1529,26 @@
         </div>
 
 
+        <!-- AVISO DE COMPRA -->
+
+        <div class="rank-notice">
+
+            <strong>
+                IMPORTANTE:
+            </strong>
+
+            Una vez completes el pago, toma una captura de pantalla
+            de la confirmación y abre un ticket en el Discord oficial
+            de Kaizora Origins. Nuestro equipo verificará el pago y
+            te otorgará tu rango lo antes posible.
+
+        </div>
+
+
         <div class="ranks">
 
+
+            <!-- ORIGIN -->
 
             <div class="rank origin">
 
@@ -1528,6 +1568,14 @@
 
                 <div>
 
+                    <span class="old-price">
+                        $4.99
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
+
                     <div class="rank-price">
                         $2.99
                     </div>
@@ -1544,6 +1592,8 @@
 
             </div>
 
+
+            <!-- ELITE -->
 
             <div class="rank elite">
 
@@ -1563,6 +1613,14 @@
 
                 <div>
 
+                    <span class="old-price">
+                        $6.99
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
+
                     <div class="rank-price">
                         $4.99
                     </div>
@@ -1579,6 +1637,8 @@
 
             </div>
 
+
+            <!-- CELESTIAL -->
 
             <div class="rank celestial">
 
@@ -1597,6 +1657,14 @@
 
                 <div>
 
+                    <span class="old-price">
+                        $9.99
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
+
                     <div class="rank-price">
                         $7.99
                     </div>
@@ -1613,6 +1681,8 @@
 
             </div>
 
+
+            <!-- MAJESTAD -->
 
             <div class="rank majestad">
 
@@ -1631,6 +1701,14 @@
 
                 <div>
 
+                    <span class="old-price">
+                        $13.99
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
+
                     <div class="rank-price">
                         $11.99
                     </div>
@@ -1647,6 +1725,8 @@
 
             </div>
 
+
+            <!-- GUARDIAN -->
 
             <div class="rank guardian">
 
@@ -1666,6 +1746,14 @@
 
                 <div>
 
+                    <span class="old-price">
+                        $17.99
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
+
                     <div class="rank-price">
                         $15.99
                     </div>
@@ -1682,6 +1770,8 @@
 
             </div>
 
+
+            <!-- SEMIDIOS -->
 
             <div class="rank semidios">
 
@@ -1700,6 +1790,14 @@
 
                 <div>
 
+                    <span class="old-price">
+                        $26.99
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
+
                     <div class="rank-price">
                         $24.99
                     </div>
@@ -1716,6 +1814,8 @@
 
             </div>
 
+
+            <!-- DIOS -->
 
             <div class="rank dios">
 
@@ -1734,6 +1834,14 @@
 
                 <div>
 
+                    <span class="old-price">
+                        $36.99
+                    </span>
+
+                    <span class="discount">
+                        20% DE DESCUENTO
+                    </span>
+
                     <div class="rank-price">
                         $34.99
                     </div>
@@ -1750,6 +1858,8 @@
 
             </div>
 
+
+            <!-- PRÓXIMAMENTE -->
 
             <div class="rank soon">
 
@@ -2022,7 +2132,6 @@
 
         </p>
 
-
         <p style="margin-top:9px;">
 
             Servidor de Minecraft independiente.
@@ -2091,4 +2200,5 @@
 
 
 </body>
+
 </html>
